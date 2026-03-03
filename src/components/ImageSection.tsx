@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import imagem01 from "@/assets/imagem01/WhatsApp Image 2026-03-03 at 11.58.14.jpeg";
+import imagem01 from "@/assets/imagem01.jpeg";
 
 const ImageSection = () => {
     return (
