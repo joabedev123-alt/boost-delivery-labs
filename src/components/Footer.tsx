@@ -31,9 +31,12 @@ const Footer = () => {
             <h4 className="font-display font-semibold text-foreground mb-4">Endereço</h4>
             <div className="flex items-start gap-2 text-sm text-muted-foreground">
               <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-              <span>Rua Pomba, 485 - Bairro Goiânia<br />Belo Horizonte/MG</span>
+              <div className="flex flex-col gap-1">
+                <span>Rua Pomba, 485 - Bairro Goiânia</span>
+                <span>Belo Horizonte/MG</span>
+                <span className="text-xs mt-1">CNPJ: 57.171.178/0001-12</span>
+              </div>
             </div>
-            <p className="text-xs text-muted-foreground mt-3">CNPJ: 57.171.178/0001-12</p>
           </div>
 
           <div>

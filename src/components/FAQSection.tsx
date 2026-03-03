@@ -21,11 +21,11 @@ const faqs = [
   },
   {
     q: "Como funciona o suporte?",
-    a: "O suporte é feito diretamente via WhatsApp, de segunda a sábado, com acompanhamento diário da sua loja.",
+    a: "O suporte é feito via Grupo de WhatsApp exclusivo da sua operação de segunda a domingo, de 09:00 às 22:45. (horário que se encerra o suporte via chat do iFood).",
   },
   {
     q: "Posso contratar iFood e 99 Food juntos?",
-    a: "Sim! A gestão da 99 Food é um adicional de R$ 500,00 na mensalidade. Mantemos equilíbrio entre as plataformas.",
+    a: "Sim! A gestão de 99 Food tem um adicional de R$500,00 na mensalidade. Para que seu iFood funcione bem é necessário tomar cuidados e ter uma gestão eficiente no formato Multilojas.",
   },
 ];
 

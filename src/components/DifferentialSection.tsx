@@ -28,9 +28,9 @@ const DifferentialSection = () => {
             <div className="p-3 rounded-xl bg-accent/10 w-fit mb-4">
               <Gem className="w-6 h-6 text-accent" />
             </div>
-            <h3 className="text-lg font-display font-semibold mb-3 text-foreground">Gestão Multi-plataforma</h3>
+            <h3 className="text-lg font-display font-semibold mb-3 text-foreground">Gestão Multiplataformas</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Ajustamos seu cardápio na 99 Food sem prejudicar o desempenho do iFood, mantendo equilíbrio entre plataformas.
+              Ajustamos seu cardápio e estratégias na 99 Food ou Keeta, visando não atrapalhar o desenvolvimento do iFood, pois é a plataforma mais sólida no cenário de delivery.
             </p>
           </motion.div>
 
@@ -60,9 +60,9 @@ const DifferentialSection = () => {
             <div className="p-3 rounded-xl bg-primary/10 w-fit mb-4">
               <AlertCircle className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="text-lg font-display font-semibold mb-3 text-foreground">99 Food</h3>
+            <h3 className="text-lg font-display font-semibold mb-3 text-foreground">Condições especiais</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Gestão da 99 Food disponível com acréscimo de R$ 500,00 na mensalidade para máximo alcance.
+              Condições especiais para Multilojas no iFood. Mensalidades reduzidas e desenvolvimento das suas marcas.
             </p>
           </motion.div>
         </div>
