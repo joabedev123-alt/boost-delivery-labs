@@ -1,23 +1,47 @@
-import { Star } from "lucide-react";
+import { Star, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const testimonials = [
   {
-    name: "Carlos Oliveira",
-    business: "Burger House BH",
-    text: "Em 2 meses as vendas subiram 60%. A gestão de cupons e ranqueamento fez toda diferença!",
+    name: "Luiz Arthur",
+    business: "Pizzaria Dom Carvalho - Belém PA",
+    text: "Confira o depoimento completo em vídeo no nosso Instagram.",
+    link: "https://www.instagram.com/s/aGlnaGxpZ2h0OjE4NDQxMDQxNTI0MTA0NDIy?story_media_id=3827498283510640016_1688769703&igsh=ZGdyMDN0bGF2bjEy",
     stars: 5,
   },
   {
-    name: "Fernanda Lima",
-    business: "Sushi Express",
-    text: "Paramos de perder dinheiro com cancelamentos. O suporte é rápido e sempre presente.",
+    name: "Edmundo Jr",
+    business: "Mr Cheff Pizza - BH/MG",
+    text: '"Antes do Antônio entrar não havia efetividade no iFood. Fui indicado e com a gestão do Antônio tivemos um salto nas vendas. Tornou nosso cardápio atrativo e aumentou nossas vendas". Alcançamos 6 dígitos no faturamento!',
+    link: "https://www.instagram.com/reel/C3i9zC-xngt/?igsh=Y2MwajNteGg3ZXIx",
     stars: 5,
   },
   {
-    name: "Ricardo Santos",
-    business: "Pizza do Rê",
-    text: "Melhor investimento que fiz pro meu delivery. Profissionais sérios e comprometidos.",
+    name: "Fred",
+    business: "Meu X Burguer, BH/MG",
+    text: '"Foi só ele entrar aqui e os pedidos começaram a bombar. Essa parceria vai longe". Faça como o Fred e otimize seu iFood com ajustes estratégicos para alavancagem no delivery.',
+    link: "https://www.instagram.com/reel/C9OOQSOxAhq/?igsh=MTc2M2YxeGJ2cnRvdw==",
+    stars: 5,
+  },
+  {
+    name: "Anderson",
+    business: "Mister Dog - Cascavel, PR",
+    text: '"Eu tava bem perdido quanto a cardápio e iFood e o Antônio foi de suma importância. Recomendo!". Ajudamos com melhoria de cardápio digital, otimização no iFood e gestão de loja.',
+    link: "https://www.instagram.com/reel/DLnGNkETH5l/?igsh=MTdycDNtM2RxNWFocQ==",
+    stars: 5,
+  },
+  {
+    name: "Renato",
+    business: "Ruffinus Pizzaria - Campo Grande/MS",
+    text: '"Eu não acreditava nisso, mas o Antônio melhorou minhas vendas e ficaram mais lucrativas. Diminuí os problemas e cancelamentos. Eu tive resultado e você também pode ter!".',
+    link: "https://www.instagram.com/reel/DEpzRYExvBL/?igsh=MWNvejZiN3c2dzBkNQ==",
     stars: 5,
   },
 ];
@@ -39,28 +63,48 @@ const TestimonialsSection = () => {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto px-4 sm:px-0">
-          {testimonials.map((t, i) => (
-            <motion.div
-              key={t.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="rounded-2xl bg-card border border-border/50 p-8 hover:glow-primary transition-shadow duration-300"
-            >
-              <div className="flex gap-1 mb-4">
-                {Array.from({ length: t.stars }).map((_, j) => (
-                  <Star key={j} className="w-4 h-4 fill-primary text-primary" />
-                ))}
-              </div>
-              <p className="text-foreground text-sm leading-relaxed mb-6">"{t.text}"</p>
-              <div>
-                <p className="font-display font-semibold text-foreground text-sm">{t.name}</p>
-                <p className="text-xs text-muted-foreground">{t.business}</p>
-              </div>
-            </motion.div>
-          ))}
+        <div className="max-w-5xl mx-auto px-4 sm:px-12">
+          <Carousel
+            opts={{
+              align: "start",
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4 sm:-ml-6">
+              {testimonials.map((t, i) => (
+                <CarouselItem key={t.name} className="pl-4 sm:pl-6 md:basis-1/2 lg:basis-1/3">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1 }}
+                    className="rounded-2xl bg-card border border-border/50 p-8 hover:glow-primary transition-shadow duration-300 h-full flex flex-col"
+                  >
+                    <div className="flex gap-1 mb-4">
+                      {Array.from({ length: t.stars }).map((_, j) => (
+                        <Star key={j} className="w-4 h-4 fill-primary text-primary" />
+                      ))}
+                    </div>
+                    <p className="text-foreground text-sm leading-relaxed mb-6 flex-grow">"{t.text}"</p>
+                    {t.link && (
+                      <a href={t.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-primary hover:text-accent text-sm font-medium mb-6 transition-colors border border-primary/30 rounded-full px-4 py-1.5 w-fit hover:bg-primary/10">
+                        Ver depoimento
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </a>
+                    )}
+                    <div className="mt-auto">
+                      <p className="font-display font-semibold text-foreground text-sm">{t.name}</p>
+                      <p className="text-xs text-muted-foreground">{t.business}</p>
+                    </div>
+                  </motion.div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="hidden sm:block">
+              <CarouselPrevious className="bg-secondary/50 hover:bg-secondary border-none" />
+              <CarouselNext className="bg-secondary/50 hover:bg-secondary border-none" />
+            </div>
+          </Carousel>
         </div>
       </div>
     </section>
