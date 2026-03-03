@@ -48,7 +48,7 @@ const Header = () => {
         >
           <div className="container flex items-center justify-between py-3 px-6">
             <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center">
-              <img src="/logo.png" alt="AM Consultoria Logo" className="h-10 w-auto" />
+              <img src="/logo.png" alt="AM Consultoria Logo" className="h-16 md:h-20 w-auto object-contain" />
             </button>
 
             <nav className="hidden lg:flex items-center gap-6">
