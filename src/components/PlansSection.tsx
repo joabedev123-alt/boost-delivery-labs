@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 
-const WHATSAPP_URL = "https://wa.me/5531990858563?text=Olá! Tenho interesse no plano";
+const WHATSAPP_URL = "https://wa.me/antoniomelo.consultoriabh?text=Ol%C3%A1%21+Tenho+interesse+no+plano";
 
 const plans = [
   {

@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Instagram, Facebook, Linkedin } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram, Facebook, Linkedin, Store } from "lucide-react";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 
 const Footer = () => {
@@ -16,7 +16,7 @@ const Footer = () => {
           <div>
             <h4 className="font-display font-semibold text-foreground mb-4">Contato</h4>
             <div className="space-y-3">
-              <a href="https://wa.me/5531990858563" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-[#25D366] transition-colors">
+              <a href="https://wa.me/antoniomelo.consultoriabh?text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+a+gest%C3%A3o+de+delivery" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-[#25D366] transition-colors">
                 <WhatsAppIcon className="w-4 h-4" />
                 (31) 99085-8563
               </a>
@@ -41,15 +41,18 @@ const Footer = () => {
 
           <div>
             <h4 className="font-display font-semibold text-foreground mb-4">Redes Sociais</h4>
-            <div className="flex gap-3">
-              <a href="#" className="p-2.5 rounded-lg bg-secondary hover:bg-primary/20 transition-colors group">
+            <div className="flex flex-wrap gap-3">
+              <a href="https://www.instagram.com/antoniomelo.bh?utm_source=qr&igsh=MnF1a3o1OGgzM2Fw" target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-lg bg-secondary hover:bg-primary/20 transition-colors group">
                 <Instagram className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
               </a>
-              <a href="#" className="p-2.5 rounded-lg bg-secondary hover:bg-primary/20 transition-colors group">
+              <a href="https://www.facebook.com/share/1CZDZM4VDH/" target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-lg bg-secondary hover:bg-primary/20 transition-colors group">
                 <Facebook className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
               </a>
-              <a href="#" className="p-2.5 rounded-lg bg-secondary hover:bg-primary/20 transition-colors group">
+              <a href="https://www.linkedin.com/in/antoniomelocomercial?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-lg bg-secondary hover:bg-primary/20 transition-colors group">
                 <Linkedin className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+              </a>
+              <a href="https://www.google.com/search?gs_ssp=eJzj4tVP1zc0rMo2TknLLTE0YLRSNqhINLNMMjM2MU9LM081SbMyqDAxNbI0SDI3tzAxTTFLM0jzUkrMK8nPy8xXyE3NyVcozs8pPbw8P7VYITVXISU1J7MstagSAImJHJk&q=antonio+melo+solu%C3%A7oes+em+delivery&oq=antoniomelo+s&gs_lcrp=EgZjaHJvbWUqEggBEC4YDRivARjHARiABBiOBTIGCAAQRRg5MhIIARAuGA0YrwEYxwEYgAQYjgUyCQgCEAAYDRiABDIICAMQABgNGB4yCAgEEAAYDRgeMgoIBRAAGAUYDRgeMgoIBhAAGAUYDRgeMgoIBxAAGAUYDRgeMgoICBAAGAUYDRge0gEINDU2MWowajeoAgiwAgHxBQc_YT0OqXmP&sourceid=chrome&ie=UTF-8" target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-lg bg-secondary hover:bg-primary/20 transition-colors group" title="Google Meu Negócio">
+                <Store className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
               </a>
             </div>
           </div>

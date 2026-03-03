@@ -13,7 +13,7 @@ const navItems = [
   { label: "Contato", href: "#contato" },
 ];
 
-const WHATSAPP_URL = "https://wa.me/5531990858563?text=Olá! Gostaria de saber mais sobre a gestão de delivery.";
+const WHATSAPP_URL = "https://wa.me/antoniomelo.consultoriabh?text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+a+gest%C3%A3o+de+delivery";
 
 const Header = () => {
   const [visible, setVisible] = useState(true);
