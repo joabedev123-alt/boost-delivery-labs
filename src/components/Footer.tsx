@@ -7,7 +7,9 @@ const Footer = () => {
       <div className="container relative z-10">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
-            <h3 className="font-display text-xl font-bold gradient-text mb-4">AM Consultoria</h3>
+            <div className="mb-4">
+              <img src="/logo.png" alt="AM Consultoria Logo" className="h-12 w-auto" />
+            </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Gestão profissional de delivery. Mais vendas, mais lucro, menos dor de cabeça.
             </p>
