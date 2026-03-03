@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import LogoSection from "@/components/LogoSection";
 import HeroSection from "@/components/HeroSection";
 import ImageSection from "@/components/ImageSection";
 import ServicesSection from "@/components/ServicesSection";
@@ -19,6 +20,7 @@ const Index = () => {
       <div className="mx-2 sm:mx-4 my-2 sm:my-4 rounded-3xl border border-border/30 overflow-hidden glow-frame noise-bg">
         <Header />
         <main className="relative z-10">
+          <LogoSection />
           <HeroSection />
           <ImageSection />
           <ServicesSection />

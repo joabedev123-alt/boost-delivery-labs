@@ -47,8 +47,8 @@ const Header = () => {
           className="fixed top-4 left-4 right-4 z-50 rounded-2xl border border-border/50 bg-background/70 backdrop-blur-xl"
         >
           <div className="container flex items-center justify-between py-3 px-6">
-            <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center -ml-4 -mt-8 -mb-8">
-              <img src="/logo.png" alt="AM Consultoria Logo" className="h-32 md:h-40 lg:h-48 w-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform" />
+            <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="font-display text-xl font-bold gradient-text">
+              AM Consultoria
             </button>
 
             <nav className="hidden lg:flex items-center gap-6">
