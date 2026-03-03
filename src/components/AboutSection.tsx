@@ -50,32 +50,35 @@ const AboutSection = () => {
                     >
                         <span className="text-sm text-primary font-medium uppercase tracking-widest block mb-3">Quem Somos</span>
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold leading-tight mb-6">
-                            Nosso foco é <span className="gradient-text">alavancar</span> o seu negócio.
+                            Antônio Melo <span className="gradient-text">Soluções em Delivery</span>
                         </h2>
 
-                        <div className="space-y-6 text-muted-foreground leading-relaxed">
+                        <div className="space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed overflow-y-auto pr-4" style={{ maxHeight: "400px" }}>
                             <p>
-                                A <strong>AM Consultoria</strong> nasceu da paixão por transformar a realidade de donos de delivery. Sabemos das noites mal dormidas, do estresse operacional e da dificuldade em ver o faturamento acompanhando todo o suor do dia a dia.
+                                A Antônio Melo Soluções em Delivery nasceu da percepção clara de uma oportunidade pouco explorada no mercado brasileiro: a gestão estratégica de plataformas de delivery.
                             </p>
                             <p>
-                                Nossa atuação vai muito além de "apertar botões" nas plataformas. Somos parceiros estratégicos que entram no seu negócio para analisar ponta a ponta: desde a foto do cardápio até a precificação e posicionamento na sua região.
+                                Durante minha atuação como executivo na 99 Food, iFood e Hyperlocal Delivery, percebi que ainda não existia a profissão de Gestor de Plataformas. Enquanto as tecnologias evoluíam rapidamente, muitos donos de restaurantes enfrentavam dificuldades para entender os mecanismos das plataformas — seja por falta de conhecimento técnico, seja pela rotina intensa da operação.
+                            </p>
+                            <p>
+                                Foi nesse cenário que enxerguei o futuro: a Gestão de Delivery não era apenas um serviço, mas uma nova especialização estratégica.
+                            </p>
+                            <p>
+                                Decidi aprofundar meus estudos, compreender a fundo cada ferramenta, cada métrica e cada variável que impacta o desempenho de uma loja. O que começou como curiosidade profissional rapidamente se transformou em propósito.
+                            </p>
+                            <p>
+                                Desde então, já são mais de 1.500 lojas atendidas, entre estabelecimentos credenciados e consultorias realizadas. Ao longo dessa trajetória, desenvolvemos estratégias focadas em crescimento sustentável, aumento de faturamento e, principalmente, lucratividade — porque sabemos que o empresário precisa de resultado, não apenas de movimentação.
+                            </p>
+                            <p>
+                                Com o tempo, entendemos que vender mais é apenas parte da equação. A gestão de problemas, cancelamentos, avaliações e crises também exige método, estratégia e agilidade. Por isso, ampliamos nossa estrutura e formamos uma equipe especializada para oferecer uma gestão completa e eficiente.
+                            </p>
+                            <p>
+                                Hoje, entregamos muito mais do que ajustes em cardápio ou campanhas promocionais. Entregamos visão estratégica, acompanhamento diário e decisões orientadas por dados.
+                            </p>
+                            <p className="font-semibold text-foreground pt-2">
+                                Se você quer escalar sua operação, otimizar resultados e transformar seu delivery em uma máquina de crescimento, nós estamos prontos para te ajudar.
                             </p>
                         </div>
-
-                        <ul className="mt-8 space-y-4">
-                            {[
-                                "Atendimento consultivo e humanizado",
-                                "Foco extremo no aumento de conversões e ROI",
-                                "Experiência comprovada com grandes marcas"
-                            ].map((item, idx) => (
-                                <li key={idx} className="flex items-center gap-3">
-                                    <div className="bg-primary/10 rounded-full p-1 shrink-0">
-                                        <CheckCircle2 className="w-4 h-4 text-primary" />
-                                    </div>
-                                    <span className="text-sm font-medium text-foreground">{item}</span>
-                                </li>
-                            ))}
-                        </ul>
                     </motion.div>
                 </div>
             </div>
