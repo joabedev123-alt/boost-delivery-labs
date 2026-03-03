@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 const navItems = [
   { label: "Serviços", href: "#servicos" },
@@ -72,8 +73,8 @@ const Header = () => {
                 Solicitar Diagnóstico
               </Button>
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                <Button size="sm" className="bg-gradient-to-r from-primary to-accent hover:opacity-90 text-primary-foreground gap-2">
-                  <MessageCircle className="w-4 h-4" />
+                <Button size="sm" className="bg-gradient-to-r from-primary to-accent hover:from-[#25D366] hover:to-[#20BD5A] hover:text-white transition-all duration-300 text-primary-foreground gap-2 border-none">
+                  <WhatsAppIcon className="w-4 h-4" />
                   WhatsApp
                 </Button>
               </a>
@@ -103,8 +104,8 @@ const Header = () => {
                     </button>
                   ))}
                   <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="mt-2">
-                    <Button className="w-full bg-gradient-to-r from-primary to-accent text-primary-foreground gap-2">
-                      <MessageCircle className="w-4 h-4" />
+                    <Button className="w-full bg-gradient-to-r from-primary to-accent hover:from-[#25D366] hover:to-[#20BD5A] hover:text-white transition-all duration-300 text-primary-foreground gap-2 border-none">
+                      <WhatsAppIcon className="w-4 h-4" />
                       Chamar no WhatsApp
                     </Button>
                   </a>

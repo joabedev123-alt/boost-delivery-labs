@@ -1,5 +1,5 @@
-import { MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 const WHATSAPP_URL = "https://wa.me/5531990858563?text=Olá! Gostaria de saber mais sobre a gestão de delivery.";
 
@@ -15,7 +15,7 @@ const WhatsAppButton = () => {
       className="fixed bottom-6 right-6 z-50 p-4 rounded-full bg-[#25D366] hover:bg-[#20BD5A] transition-colors shadow-lg shadow-[#25D366]/30"
       aria-label="Chamar no WhatsApp"
     >
-      <MessageCircle className="w-6 h-6 text-primary-foreground" />
+      <WhatsAppIcon className="w-8 h-8 text-white" />
     </motion.a>
   );
 };

@@ -24,22 +24,22 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section id="depoimentos" className="relative py-24">
-      <div className="section-divider mb-24" />
+    <section id="depoimentos" className="relative py-16 lg:py-24">
+      <div className="section-divider mb-16 lg:mb-24" />
       <div className="container relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 lg:mb-16 px-4"
         >
-          <span className="text-sm text-primary font-medium uppercase tracking-widest">Depoimentos</span>
-          <h2 className="text-3xl sm:text-4xl font-display font-bold mt-3">
+          <span className="text-xs sm:text-sm text-primary font-medium uppercase tracking-widest">Depoimentos</span>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold mt-2 sm:mt-3">
             Quem confia em nós, <span className="gradient-text">cresce</span>
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto px-4 sm:px-0">
           {testimonials.map((t, i) => (
             <motion.div
               key={t.name}

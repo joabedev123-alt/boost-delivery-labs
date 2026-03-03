@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { MessageCircle, Send } from "lucide-react";
 import { motion } from "framer-motion";
 import { useToast } from "@/hooks/use-toast";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 const WHATSAPP_URL = "https://wa.me/5531990858563?text=Olá! Gostaria de saber mais sobre a gestão de delivery.";
 
@@ -33,20 +34,20 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contato" className="relative py-24">
-      <div className="section-divider mb-24" />
+    <section id="contato" className="relative py-16 lg:py-24">
+      <div className="section-divider mb-16 lg:mb-24" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_hsl(15_90%_55%/0.08),transparent_60%)]" />
       <div className="container relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 lg:mb-16 px-4"
         >
-          <h2 className="text-3xl sm:text-4xl font-display font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold mb-3 sm:mb-4">
             Pare de perder dinheiro por falta de <span className="gradient-text">estratégia</span>.
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-sm sm:text-lg text-muted-foreground">
             Pronto para crescer de verdade no iFood?
           </p>
         </motion.div>
@@ -56,9 +57,9 @@ const ContactSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           onSubmit={handleSubmit}
-          className="max-w-2xl mx-auto gradient-border rounded-2xl bg-card p-8 space-y-4"
+          className="max-w-2xl mx-auto gradient-border rounded-2xl bg-card p-5 sm:p-8 space-y-4 mx-4 sm:mx-auto"
         >
-          <div className="grid sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Input
               placeholder="Seu nome"
               value={form.name}
@@ -76,7 +77,7 @@ const ContactSection = () => {
               className="bg-secondary border-border/50 text-foreground placeholder:text-muted-foreground"
             />
           </div>
-          <div className="grid sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Input
               placeholder="Nome da loja"
               value={form.store}
@@ -109,14 +110,14 @@ const ContactSection = () => {
             rows={4}
             className="bg-secondary border-border/50 text-foreground placeholder:text-muted-foreground resize-none"
           />
-          <div className="flex flex-wrap gap-3 pt-2">
-            <Button type="submit" className="bg-gradient-to-r from-primary to-accent text-primary-foreground gap-2 flex-1">
+          <div className="flex flex-col sm:flex-row gap-3 pt-2">
+            <Button type="submit" className="w-full sm:flex-1 bg-gradient-to-r from-primary to-accent text-primary-foreground hover:from-primary/90 hover:to-accent/90 transition-all duration-300 gap-2">
               <Send className="w-4 h-4" />
               ENVIAR
             </Button>
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="flex-1">
-              <Button type="button" variant="outline" className="w-full border-primary/30 text-foreground hover:bg-primary/10 gap-2">
-                <MessageCircle className="w-4 h-4" />
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="w-full sm:flex-1 block">
+              <Button type="button" variant="outline" className="w-full border-primary/30 text-foreground hover:bg-[#25D366] hover:text-white hover:border-[#25D366] transition-all duration-300 gap-2">
+                <WhatsAppIcon className="w-4 h-4" />
                 CHAMAR NO WHATSAPP
               </Button>
             </a>

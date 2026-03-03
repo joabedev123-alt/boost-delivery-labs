@@ -1,6 +1,7 @@
 import { ArrowRight, CheckCircle2, TrendingUp, Star, BarChart3 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 const WHATSAPP_URL = "https://wa.me/5531990858563?text=Olá! Quero vender mais no iFood!";
 
@@ -18,7 +19,7 @@ const floatingCards = [
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden noise-bg">
+    <section className="relative min-h-[100svh] flex items-center pt-24 pb-12 lg:pt-28 lg:pb-16 overflow-hidden noise-bg">
       {/* Background effects */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_hsl(0_85%_40%/0.15),transparent_60%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_hsl(280_80%_40%/0.1),transparent_60%)]" />
@@ -32,44 +33,44 @@ const HeroSection = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-sm text-primary mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 sm:px-4 sm:py-1.5 rounded-full border border-primary/30 bg-primary/10 text-xs sm:text-sm text-primary mb-4 sm:mb-6">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse-glow" />
               Especialistas em delivery
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold leading-tight mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight mb-4 sm:mb-6">
               GESTÃO PROFISSIONAL DE LOJA NO{" "}
               <span className="gradient-text">IFOOD</span>
             </h1>
 
-            <p className="text-lg text-muted-foreground mb-4 max-w-xl leading-relaxed">
+            <p className="text-base sm:text-lg text-muted-foreground mb-3 sm:mb-4 max-w-xl leading-relaxed">
               Seu delivery nas mãos de especialistas focados em <strong className="text-foreground">crescimento e lucro</strong>.
             </p>
-            <p className="text-base text-muted-foreground mb-8 max-w-xl">
+            <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8 max-w-xl">
               Se sua loja está estagnada no iFood, nós assumimos a gestão completa para você focar apenas na operação.
             </p>
 
-            <div className="flex flex-wrap gap-3 mb-8">
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-gradient-to-r from-primary to-accent text-primary-foreground gap-2 glow-primary text-base px-8">
-                  QUERO VENDER MAIS NO IFOOD
-                  <ArrowRight className="w-5 h-5" />
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 mb-8">
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                <Button size="lg" className="w-full bg-gradient-to-r from-primary to-accent hover:from-[#25D366] hover:to-[#20BD5A] text-primary-foreground hover:text-white transition-all duration-300 gap-2 glow-primary text-sm sm:text-base px-6 sm:px-8 border-none">
+                  <WhatsAppIcon className="w-5 h-5 shrink-0" />
+                  <span className="truncate">QUERO VENDER MAIS NO IFOOD</span>
                 </Button>
               </a>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-border hover:bg-secondary text-foreground gap-2 text-base"
+                className="w-full sm:w-auto border-border hover:bg-secondary text-foreground gap-2 text-sm sm:text-base"
                 onClick={() => document.querySelector("#contato")?.scrollIntoView({ behavior: "smooth" })}
               >
                 SOLICITAR DIAGNÓSTICO GRATUITO
               </Button>
             </div>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               {badges.map((badge) => (
-                <span key={badge} className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <CheckCircle2 className="w-4 h-4 text-primary" />
+                <span key={badge} className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground">
+                  <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
                   {badge}
                 </span>
               ))}

@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Instagram, Facebook, Linkedin } from "lucide-react";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 const Footer = () => {
   return (
@@ -15,8 +16,8 @@ const Footer = () => {
           <div>
             <h4 className="font-display font-semibold text-foreground mb-4">Contato</h4>
             <div className="space-y-3">
-              <a href="https://wa.me/5531990858563" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
-                <Phone className="w-4 h-4" />
+              <a href="https://wa.me/5531990858563" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-[#25D366] transition-colors">
+                <WhatsAppIcon className="w-4 h-4" />
                 (31) 99085-8563
               </a>
               <a href="mailto:antoniomelo.consultoriabh@gmail.com" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
@@ -55,6 +56,16 @@ const Footer = () => {
         <p className="text-center text-xs text-muted-foreground">
           © {new Date().getFullYear()} AM Consultoria. Todos os direitos reservados.
         </p>
+        <div className="flex justify-center mt-6">
+          <a
+            href="https://camaly.com.br/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-secondary/80 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary transition-all"
+          >
+            Produzida com <span className="text-green-500">💚</span> por <span className="font-bold tracking-wide text-primary">CAMALY</span>
+          </a>
+        </div>
       </div>
     </footer>
   );

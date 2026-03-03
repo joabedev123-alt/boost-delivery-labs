@@ -21,25 +21,25 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="servicos" className="relative py-24 noise-bg">
-      <div className="section-divider mb-24" />
+    <section id="servicos" className="relative py-16 lg:py-24 noise-bg">
+      <div className="section-divider mb-16 lg:mb-24" />
       <div className="container relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 lg:mb-16 px-4"
         >
-          <span className="text-sm text-primary font-medium uppercase tracking-widest">Serviços</span>
-          <h2 className="text-3xl sm:text-4xl font-display font-bold mt-3 mb-4">
+          <span className="text-xs sm:text-sm text-primary font-medium uppercase tracking-widest">Serviços</span>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold mt-2 sm:mt-3 mb-3 sm:mb-4">
             O que <span className="gradient-text">fazemos</span> por você
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
             Gestão completa da sua loja no iFood com estratégia, execução e acompanhamento diário.
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 px-2 sm:px-0">
           {services.map((service, i) => (
             <motion.div
               key={service.title}
