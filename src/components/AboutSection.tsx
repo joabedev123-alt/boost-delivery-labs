@@ -53,7 +53,7 @@ const AboutSection = () => {
                             Antônio Melo <span className="gradient-text">Soluções em Delivery</span>
                         </h2>
 
-                        <div className="space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed overflow-y-auto pr-4" style={{ maxHeight: "400px" }}>
+                        <div className="space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed lg:overflow-y-auto pr-0 lg:pr-4" style={{ maxHeight: "none", lg: { maxHeight: "400px" } } as any}>
                             <p>
                                 A Antônio Melo Soluções em Delivery nasceu da percepção clara de uma oportunidade pouco explorada no mercado brasileiro: a gestão estratégica de plataformas de delivery.
                             </p>
