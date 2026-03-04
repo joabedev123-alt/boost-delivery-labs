@@ -7,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const testimonials = [
   {
@@ -26,21 +27,21 @@ const testimonials = [
   {
     name: "Fred",
     business: "Meu X Burguer, BH/MG",
-    text: '"Foi só ele entrar aqui e os pedidos começaram a bombar. Essa parceria vai longe". Faça como o Fred e otimize seu iFood com ajustes estratégicos para alavancagem no delivery.',
+    text: "Foi só ele entrar aqui e os pedidos começaram a bombar. Essa parceria vai longe. Faça como o Fred e otimize seu iFood com ajustes estratégicos para alavancagem no delivery.",
     link: "https://www.instagram.com/reel/C9OOQSOxAhq/?igsh=MTc2M2YxeGJ2cnRvdw==",
     stars: 5,
   },
   {
     name: "Anderson",
     business: "Mister Dog - Cascavel, PR",
-    text: '"Eu tava bem perdido quanto a cardápio e iFood e o Antônio foi de suma importância. Recomendo!". Ajudamos com melhoria de cardápio digital, otimização no iFood e gestão de loja.',
+    text: "Eu tava bem perdido quanto a cardápio e iFood e o Antônio foi de suma importância. Recomendo! Ajudamos com melhoria de cardápio digital, otimização no iFood e gestão de loja.",
     link: "https://www.instagram.com/reel/DLnGNkETH5l/?igsh=MTdycDNtM2RxNWFocQ==",
     stars: 5,
   },
   {
     name: "Renato",
     business: "Ruffinus Pizzaria - Campo Grande/MS",
-    text: '"Eu não acreditava nisso, mas o Antônio melhorou minhas vendas e ficaram mais lucrativas. Diminuí os problemas e cancelamentos. Eu tive resultado e você também pode ter!".',
+    text: "Eu não acreditava nisso, mas o Antônio melhorou minhas vendas e ficaram mais lucrativas. Diminuí os problemas e cancelamentos. Eu tive resultado e você também pode ter!",
     link: "https://www.instagram.com/reel/DEpzRYExvBL/?igsh=MWNvejZiN3c2dzBkNQ==",
     stars: 5,
   },
@@ -67,7 +68,13 @@ const TestimonialsSection = () => {
           <Carousel
             opts={{
               align: "start",
+              loop: true,
             }}
+            plugins={[
+              Autoplay({
+                delay: 4000,
+              }),
+            ]}
             className="w-full"
           >
             <CarouselContent className="-ml-4 sm:-ml-6">
