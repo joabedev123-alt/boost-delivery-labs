@@ -34,7 +34,7 @@ const testimonials = [
   {
     name: "Anderson",
     business: "Mister Dog - Cascavel, PR",
-    text: "Eu tava bem perdido quanto a cardápio e iFood e o Antônio foi de suma importância. Recomendo! Ajudamos com melhoria de cardápio digital, otimização no iFood e gestão de loja.",
+    text: "Eu tava bem perdido quanto a cardápio e iFood e o Antônio foi de suma importância. Recomendo.",
     link: "https://www.instagram.com/reel/DLnGNkETH5l/?igsh=MTdycDNtM2RxNWFocQ==",
     stars: 5,
   },
