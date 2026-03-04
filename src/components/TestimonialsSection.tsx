@@ -12,14 +12,14 @@ const testimonials = [
   {
     name: "Luiz Arthur",
     business: "Pizzaria Dom Carvalho - Belém PA",
-    text: "Confira o depoimento completo em vídeo no nosso Instagram.",
+    text: "Antes do Antônio entrar não havia efetividade no iFood. Fui indicado e com a gestão do Antônio tivemos um salto nas vendas. Tornou nosso cardápio atrativo e aumentou nossas vendas.",
     link: "https://www.instagram.com/s/aGlnaGxpZ2h0OjE4NDQxMDQxNTI0MTA0NDIy?story_media_id=3827498283510640016_1688769703&igsh=ZGdyMDN0bGF2bjEy",
     stars: 5,
   },
   {
     name: "Edmundo Jr",
     business: "Mr Cheff Pizza - BH/MG",
-    text: '"Antes do Antônio entrar não havia efetividade no iFood. Fui indicado e com a gestão do Antônio tivemos um salto nas vendas. Tornou nosso cardápio atrativo e aumentou nossas vendas". Alcançamos 6 dígitos no faturamento!',
+    text: "Com a ajuda do especialista, que é o Antônio e uma gestão a 4 mãos, alcançamos 6 dígitos no faturamento!",
     link: "https://www.instagram.com/reel/C3i9zC-xngt/?igsh=Y2MwajNteGg3ZXIx",
     stars: 5,
   },

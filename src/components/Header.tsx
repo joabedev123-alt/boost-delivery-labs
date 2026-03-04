@@ -44,11 +44,11 @@ const Header = () => {
           animate={{ y: 0 }}
           exit={{ y: -100 }}
           transition={{ duration: 0.3 }}
-          className="fixed top-4 left-4 right-4 z-50 rounded-2xl border border-border/50 bg-background/70 backdrop-blur-xl"
+          className="fixed top-2 left-2 right-2 sm:top-4 sm:left-4 sm:right-4 z-50 rounded-2xl border border-border/50 bg-background/70 backdrop-blur-xl"
         >
-          <div className="container flex items-center justify-between py-3 px-6">
-            <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="font-display text-xl font-bold gradient-text">
-              AM Consultoria
+          <div className="container flex items-center justify-between py-2 sm:py-3 px-4 sm:px-6">
+            <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center py-1 sm:py-2">
+              <img src="/logo02-Photoroom.png" alt="AM Consultoria Logo" className="h-12 sm:h-20 md:h-24 w-auto object-contain" />
             </button>
 
             <nav className="hidden lg:flex items-center gap-6">

@@ -1,13 +1,12 @@
 import Header from "@/components/Header";
-import LogoSection from "@/components/LogoSection";
 import HeroSection from "@/components/HeroSection";
-import ImageSection from "@/components/ImageSection";
 import ServicesSection from "@/components/ServicesSection";
 import ObjectiveSection from "@/components/ObjectiveSection";
 import DifferentialSection from "@/components/DifferentialSection";
 import PlansSection from "@/components/PlansSection";
 import AboutSection from "@/components/AboutSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import PartnersSection from "@/components/PartnersSection";
 import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -20,15 +19,14 @@ const Index = () => {
       <div className="mx-2 sm:mx-4 my-2 sm:my-4 rounded-3xl border border-border/30 overflow-hidden glow-frame noise-bg">
         <Header />
         <main className="relative z-10">
-          <LogoSection />
           <HeroSection />
-          <ImageSection />
           <ServicesSection />
           <ObjectiveSection />
           <DifferentialSection />
           <PlansSection />
           <AboutSection />
           <TestimonialsSection />
+          <PartnersSection />
           <FAQSection />
           <ContactSection />
         </main>

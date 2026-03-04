@@ -1,7 +1,8 @@
-import { ArrowRight, CheckCircle2, TrendingUp, Star, BarChart3 } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { WhatsAppIcon } from "./WhatsAppIcon";
+import fotohero from "@/assets/fotohero.png";
 
 const WHATSAPP_URL = "https://wa.me/antoniomelo.consultoriabh?text=Ol%C3%A1%21+Quero+vender+mais+no+iFood%21";
 
@@ -9,12 +10,6 @@ const badges = [
   "Gestão diária",
   "Estratégia + execução",
   "100% personalizada",
-];
-
-const floatingCards = [
-  { icon: TrendingUp, label: "+47% vendas", delay: 0 },
-  { icon: Star, label: "4.9 estrelas", delay: 0.2 },
-  { icon: BarChart3, label: "Top 5 ranking", delay: 0.4 },
 ];
 
 const HeroSection = () => {
@@ -38,7 +33,7 @@ const HeroSection = () => {
               Especialistas em delivery
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight mb-4 sm:mb-6">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold leading-tight mb-4 sm:mb-6">
               GESTÃO PROFISSIONAL DE LOJA NO{" "}
               <span className="gradient-text">IFOOD</span>
             </h1>
@@ -47,7 +42,7 @@ const HeroSection = () => {
               Seu delivery nas mãos de especialistas focados em <strong className="text-foreground">crescimento e lucro</strong>.
             </p>
             <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8 max-w-xl">
-              Se sua loja está estagnada no iFood, nós assumimos a gestão completa para você focar apenas na operação.
+              Se sua loja está estagnada no iFood, se você está perdendo dinheiro com fraudes e cancelamentos indevidos ou você precisa otimizar o seu tempo, deixe sua gestão com a gente e foque apenas na produção dos pratos!
             </p>
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 mb-8">
@@ -57,14 +52,6 @@ const HeroSection = () => {
                   <span className="truncate">QUERO VENDER MAIS NO IFOOD</span>
                 </Button>
               </a>
-              <Button
-                size="lg"
-                variant="outline"
-                className="w-full sm:w-auto border-border hover:bg-secondary text-foreground gap-2 text-sm sm:text-base"
-                onClick={() => document.querySelector("#contato")?.scrollIntoView({ behavior: "smooth" })}
-              >
-                SOLICITAR DIAGNÓSTICO GRATUITO
-              </Button>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
@@ -81,23 +68,16 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="hidden lg:flex flex-col items-center gap-6 relative"
+            className="flex items-center justify-center w-full h-full relative mt-8 lg:mt-0"
           >
-            {floatingCards.map((card, i) => (
-              <motion.div
-                key={card.label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 + card.delay, duration: 0.5 }}
-                className={`gradient-border rounded-2xl bg-card p-6 flex items-center gap-4 w-64 animate-float`}
-                style={{ animationDelay: `${i * 2}s` }}
-              >
-                <div className="p-3 rounded-xl bg-primary/10">
-                  <card.icon className="w-6 h-6 text-primary" />
-                </div>
-                <span className="font-display text-lg font-semibold text-foreground">{card.label}</span>
-              </motion.div>
-            ))}
+            {/* Imagem Hero */}
+            <div className="w-full aspect-video rounded-3xl overflow-hidden shadow-2xl shadow-primary/20 border border-primary/20 bg-card/30 flex items-center justify-center backdrop-blur-sm p-2 sm:p-4">
+              <img
+                src={fotohero}
+                alt="AM Consultoria Hero"
+                className="w-full h-full object-contain hover:scale-105 transition-transform duration-700"
+              />
+            </div>
           </motion.div>
         </div>
       </div>
