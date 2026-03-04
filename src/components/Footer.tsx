@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
             <div className="mb-6 -ml-4">
-              <img src="/logo02-Photoroom.png" alt="AM Consultoria Logo" className="h-32 sm:h-48 md:h-56 w-auto object-contain drop-shadow-lg" />
+              <img src="/WhatsApp Image 2026-03-03 at 11.50.48.jpeg" alt="AM Consultoria Logo" className="h-32 sm:h-48 md:h-56 w-auto object-contain drop-shadow-lg" />
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Gestão profissional de delivery. Mais vendas, mais lucro, menos dor de cabeça.
