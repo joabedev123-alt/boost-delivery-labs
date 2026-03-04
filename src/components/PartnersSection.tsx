@@ -114,10 +114,10 @@ const PartnersSection = () => {
                         ]}
                         className="w-full"
                     >
-                        <CarouselContent className="-ml-2 md:-ml-4 flex items-center">
+                        <CarouselContent className="-ml-1 md:-ml-4 flex items-center">
                             {partners.map((partner, index) => (
-                                <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5">
-                                    <div className="flex items-center justify-center p-2 transition-all duration-300 h-32 md:h-40">
+                                <CarouselItem key={index} className="pl-1 md:pl-4 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5">
+                                    <div className="flex items-center justify-center p-2 transition-all duration-300 h-28 md:h-40">
                                         <img
                                             src={partner.logo}
                                             alt={partner.name}
@@ -128,8 +128,8 @@ const PartnersSection = () => {
                             ))}
                         </CarouselContent>
                         <div className="hidden sm:block">
-                            <CarouselPrevious className="bg-secondary/50 hover:bg-secondary border-none -left-4 sm:-left-12" />
-                            <CarouselNext className="bg-secondary/50 hover:bg-secondary border-none -right-4 sm:-right-12" />
+                            <CarouselPrevious className="bg-secondary/50 hover:bg-secondary border-none sm:-left-12" />
+                            <CarouselNext className="bg-secondary/50 hover:bg-secondary border-none sm:-right-12" />
                         </div>
                     </Carousel>
                 </div>

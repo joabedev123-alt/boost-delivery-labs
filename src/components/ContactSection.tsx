@@ -57,9 +57,9 @@ const ContactSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           onSubmit={handleSubmit}
-          className="max-w-2xl mx-auto gradient-border rounded-2xl bg-card p-5 sm:p-8 space-y-4 mx-4 sm:mx-auto"
+          className="max-w-2xl mx-auto gradient-border rounded-2xl bg-card p-5 sm:p-8 space-y-4 sm:space-y-6 mx-4 sm:mx-auto"
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             <Input
               placeholder="Seu nome"
               value={form.name}
