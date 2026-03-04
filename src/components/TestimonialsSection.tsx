@@ -27,7 +27,7 @@ const testimonials = [
   {
     name: "Fred",
     business: "Meu X Burguer, BH/MG",
-    text: "Foi só ele entrar aqui e os pedidos começaram a bombar. Essa parceria vai longe. Faça como o Fred e otimize seu iFood com ajustes estratégicos para alavancagem no delivery.",
+    text: "Foi só ele entrar aqui e os pedidos começaram a bombar. Essa parceria vai longe.",
     link: "https://www.instagram.com/reel/C9OOQSOxAhq/?igsh=MTc2M2YxeGJ2cnRvdw==",
     stars: 5,
   },
