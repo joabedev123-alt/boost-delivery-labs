@@ -12,9 +12,9 @@ const DifferentialSection = () => {
           viewport={{ once: true }}
           className="text-center mb-10 lg:mb-16 px-4"
         >
-          <span className="text-xs sm:text-sm text-accent font-medium uppercase tracking-widest">Diferencial</span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold mt-2 sm:mt-3">
-            O que nos torna <span className="gradient-text">únicos</span>
+          <span className="text-sm text-primary font-medium uppercase tracking-widest">Método</span>
+          <h2 className="text-3xl sm:text-4xl font-display font-semibold mt-3">
+            O que sustenta a consultoria
           </h2>
         </motion.div>
 
@@ -60,9 +60,9 @@ const DifferentialSection = () => {
             <div className="p-3 rounded-xl bg-primary/10 w-fit mb-4">
               <AlertCircle className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="text-lg font-display font-semibold mb-3 text-foreground">Condições especiais</h3>
+            <h3 className="text-lg font-display font-semibold mb-3 text-foreground">Multilojas</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Condições especiais para Multilojas no iFood. Mensalidades reduzidas e desenvolvimento das suas marcas.
+              Condições especiais para quem opera mais de uma loja no iFood, com desenvolvimento das marcas e uma gestão que não trata cada unidade como um caso isolado.
             </p>
           </motion.div>
         </div>

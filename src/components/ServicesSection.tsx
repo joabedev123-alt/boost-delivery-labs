@@ -30,12 +30,12 @@ const ServicesSection = () => {
           viewport={{ once: true }}
           className="text-center mb-10 lg:mb-16 px-4"
         >
-          <span className="text-xs sm:text-sm text-primary font-medium uppercase tracking-widest">Serviços</span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold mt-2 sm:mt-3 mb-3 sm:mb-4">
-            O que <span className="gradient-text">fazemos</span> por você
+          <span className="text-sm text-primary font-medium uppercase tracking-widest">Soluções</span>
+          <h2 className="text-3xl sm:text-4xl font-display font-semibold mt-3 mb-4">
+            O que a consultoria conduz na loja
           </h2>
-          <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
-            Gestão completa da sua loja no iFood com estratégia, execução e acompanhamento diário.
+          <p className="text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            Da leitura da operação ao cardápio, às promoções e ao suporte do expediente. O trabalho cobre a gestão da loja nas plataformas, com prioridade para o iFood.
           </p>
         </motion.div>
 

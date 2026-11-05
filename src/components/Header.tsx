@@ -1,113 +1,115 @@
-import { useState, useEffect } from "react";
-import { Menu, X, MessageCircle } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { NavLink, Link, useLocation } from "react-router-dom";
 import { WhatsAppIcon } from "./WhatsAppIcon";
+import { whatsappLink } from "@/lib/contact";
+import { cn } from "@/lib/utils";
 
-const navItems = [
-  { label: "Serviços", href: "#servicos" },
-  { label: "Diferencial", href: "#diferencial" },
-  { label: "Planos", href: "#planos" },
-  { label: "Depoimentos", href: "#depoimentos" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Contato", href: "#contato" },
+export const navItems = [
+  { label: "A empresa", to: "/a-empresa" },
+  { label: "Soluções", to: "/solucoes" },
+  { label: "Para quem", to: "/para-quem" },
+  { label: "Planos", to: "/planos" },
+  { label: "Formação", to: "/formacao" },
+  { label: "Garçonet", to: "/garconet" },
+  { label: "Clientes", to: "/clientes" },
+  { label: "Contato", to: "/contato" },
 ];
 
-const WHATSAPP_URL = "https://wa.me/antoniomelo.consultoriabh?text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+a+gest%C3%A3o+de+delivery";
+const WHATSAPP_URL = whatsappLink("Olá! Gostaria de saber mais sobre a consultoria de delivery.");
+
+const itemClass = ({ isActive }: { isActive: boolean }) =>
+  cn(
+    "min-h-11 cursor-pointer text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+    isActive ? "text-foreground" : "text-muted-foreground hover:text-foreground",
+  );
 
 const Header = () => {
-  const [visible, setVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
-      const current = window.scrollY;
-      setVisible(current < lastScrollY || current < 80);
-      setLastScrollY(current);
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
-
-  const scrollTo = (href: string) => {
     setMobileOpen(false);
-    const el = document.querySelector(href);
-    el?.scrollIntoView({ behavior: "smooth" });
-  };
+  }, [location.pathname]);
 
   return (
-    <AnimatePresence>
-      {visible && (
-        <motion.header
-          initial={{ y: -100 }}
-          animate={{ y: 0 }}
-          exit={{ y: -100 }}
-          transition={{ duration: 0.3 }}
-          className="fixed top-2 left-2 right-2 sm:top-4 sm:left-4 sm:right-4 z-50 rounded-2xl border border-border/50 bg-background/70 backdrop-blur-xl"
+    <header className="sticky top-0 z-50 border-b border-border/60 bg-background/90 backdrop-blur-xl">
+      <div className="container flex items-center justify-between gap-3 py-2 sm:py-3">
+        <Link
+          to="/"
+          className="flex min-h-11 cursor-pointer items-center rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          aria-label="AM Consultoria, página inicial"
         >
-          <div className="container flex items-center justify-between py-2 sm:py-3 px-4 sm:px-6">
-            <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center py-1 sm:py-2">
-              <img src="/WhatsApp Image 2026-03-03 at 11.50.48.jpeg" alt="AM Consultoria Logo" className="h-12 sm:h-20 md:h-24 w-auto object-contain" />
-            </button>
+          <img
+            src="/WhatsApp Image 2026-03-03 at 11.50.48.jpeg"
+            alt="AM Consultoria"
+            className="h-10 w-auto max-w-[9.5rem] object-contain sm:h-12 sm:max-w-none"
+          />
+        </Link>
 
-            <nav className="hidden lg:flex items-center gap-6">
+        <nav className="hidden items-center gap-4 xl:flex" aria-label="Páginas">
+          {navItems.map((item) => (
+            <NavLink key={item.to} to={item.to} className={itemClass}>
+              {item.label}
+            </NavLink>
+          ))}
+        </nav>
+
+        <div className="hidden xl:flex">
+          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+            <Button className="min-h-11 cursor-pointer gap-2 bg-primary text-primary-foreground hover:bg-primary/90">
+              <WhatsAppIcon className="h-4 w-4" />
+              Falar com a consultoria
+            </Button>
+          </a>
+        </div>
+
+        <button
+          className="inline-flex h-11 w-11 cursor-pointer items-center justify-center rounded-md text-foreground xl:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          onClick={() => setMobileOpen((open) => !open)}
+          aria-expanded={mobileOpen}
+          aria-label={mobileOpen ? "Fechar menu" : "Abrir menu"}
+        >
+          {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        </button>
+      </div>
+
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            className="max-h-[calc(100dvh-4.5rem)] overflow-y-auto border-t border-border/60 xl:hidden"
+          >
+            <nav className="flex flex-col px-4 py-3" aria-label="Páginas">
               {navItems.map((item) => (
-                <button
-                  key={item.href}
-                  onClick={() => scrollTo(item.href)}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                <NavLink
+                  key={item.to}
+                  to={item.to}
+                  className={({ isActive }) =>
+                    cn(
+                      "flex min-h-11 items-center text-base",
+                      isActive ? "text-foreground" : "text-muted-foreground",
+                    )
+                  }
                 >
                   {item.label}
-                </button>
+                </NavLink>
               ))}
-            </nav>
-
-            <div className="hidden lg:flex items-center gap-3">
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                <Button size="sm" className="bg-gradient-to-r from-primary to-accent hover:from-[#25D366] hover:to-[#20BD5A] hover:text-white transition-all duration-300 text-primary-foreground gap-2 border-none">
-                  <WhatsAppIcon className="w-4 h-4" />
-                  WhatsApp
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="mt-2">
+                <Button className="min-h-11 w-full cursor-pointer gap-2 bg-primary text-primary-foreground hover:bg-primary/90">
+                  <WhatsAppIcon className="h-4 w-4" />
+                  Falar com a consultoria
                 </Button>
               </a>
-            </div>
-
-            <button className="lg:hidden text-foreground" onClick={() => setMobileOpen(!mobileOpen)}>
-              {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
-
-          <AnimatePresence>
-            {mobileOpen && (
-              <motion.div
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: "auto", opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}
-                className="lg:hidden overflow-hidden border-t border-border/50"
-              >
-                <div className="px-6 py-4 flex flex-col gap-3">
-                  {navItems.map((item) => (
-                    <button
-                      key={item.href}
-                      onClick={() => scrollTo(item.href)}
-                      className="text-sm text-muted-foreground hover:text-foreground transition-colors text-left py-1"
-                    >
-                      {item.label}
-                    </button>
-                  ))}
-                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="mt-2">
-                    <Button className="w-full bg-gradient-to-r from-primary to-accent hover:from-[#25D366] hover:to-[#20BD5A] hover:text-white transition-all duration-300 text-primary-foreground gap-2 border-none">
-                      <WhatsAppIcon className="w-4 h-4" />
-                      Chamar no WhatsApp
-                    </Button>
-                  </a>
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </motion.header>
-      )}
-    </AnimatePresence>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </header>
   );
 };
 

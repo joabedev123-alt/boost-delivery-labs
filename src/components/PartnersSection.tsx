@@ -87,21 +87,24 @@ const partners = [
 
 const PartnersSection = () => {
     return (
-        <section className="py-12 bg-secondary/30 overflow-hidden">
-            <div className="container px-4">
+        <section id="clientes" className="py-16 lg:py-24 bg-secondary/30 overflow-hidden">
+            <div className="container">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="text-center mb-8"
                 >
-                    <span className="text-xs sm:text-sm text-primary font-medium uppercase tracking-widest">Nossos Parceiros</span>
-                    <h2 className="text-xl sm:text-2xl font-display font-bold mt-2">
-                        Empresas que confiam na nossa <span className="gradient-text">gestão</span>
+                    <span className="text-sm text-primary font-medium uppercase tracking-widest">Clientes</span>
+                    <h2 className="text-3xl sm:text-4xl font-display font-semibold mt-3">
+                        Lojas que a consultoria atende
                     </h2>
+                    <p className="text-base text-muted-foreground mt-3 max-w-2xl mx-auto">
+                        Parte das operações que já passaram pela gestão. Novas marcas entram neste espaço conforme o atendimento avança.
+                    </p>
                 </motion.div>
 
-                <div className="max-w-6xl mx-auto px-4 sm:px-12 relative">
+                <div className="relative mx-auto max-w-6xl sm:px-10">
                     <Carousel
                         opts={{
                             align: "start",

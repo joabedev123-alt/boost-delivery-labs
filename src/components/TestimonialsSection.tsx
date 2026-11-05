@@ -49,8 +49,7 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section id="depoimentos" className="relative py-16 lg:py-24">
-      <div className="section-divider mb-16 lg:mb-24" />
+    <section id="depoimentos" className="relative overflow-hidden py-16 lg:py-20">
       <div className="container relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -58,13 +57,13 @@ const TestimonialsSection = () => {
           viewport={{ once: true }}
           className="text-center mb-10 lg:mb-16 px-4"
         >
-          <span className="text-xs sm:text-sm text-primary font-medium uppercase tracking-widest">Depoimentos</span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold mt-2 sm:mt-3">
-            Quem confia em nós, <span className="gradient-text">cresce</span>
+          <span className="text-sm text-primary font-medium uppercase tracking-widest">Depoimentos</span>
+          <h2 className="text-3xl sm:text-4xl font-display font-semibold mt-3">
+            O que os responsáveis pelas lojas relatam
           </h2>
         </motion.div>
 
-        <div className="max-w-5xl mx-auto px-4 sm:px-12">
+        <div className="mx-auto max-w-5xl sm:px-10">
           <Carousel
             opts={{
               align: "start",
@@ -85,7 +84,7 @@ const TestimonialsSection = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="rounded-2xl bg-card border border-border/50 p-8 hover:glow-primary transition-shadow duration-300 h-full flex flex-col"
+                    className="flex h-full flex-col rounded-2xl border border-border/50 bg-card p-5 transition-shadow duration-300 hover:glow-primary sm:p-8"
                   >
                     <div className="flex gap-1 mb-4">
                       {Array.from({ length: t.stars }).map((_, j) => (

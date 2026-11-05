@@ -25,7 +25,11 @@ const faqs = [
   },
   {
     q: "Posso contratar iFood e 99 Food juntos?",
-    a: "Sim! A gestão de 99 Food tem um adicional de R$500,00 na mensalidade. Para que seu iFood funcione bem é necessário tomar cuidados e ter uma gestão eficiente no formato Multilojas.",
+    a: "Sim. A gestão em mais de uma plataforma é combinada de acordo com a operação, para o iFood continuar sendo tratado com o cuidado de quem trabalha no formato multilojas.",
+  },
+  {
+    q: "Dá para contratar só o cardápio ou só a análise?",
+    a: "Sim. A implementação de cardápio pode ser contratada sozinha. A análise de loja também: custa R$ 500 e entrega um relatório com histórico, problemas, soluções, leitura dos concorrentes do nicho e os ajustes para evoluir nas plataformas.",
   },
 ];
 

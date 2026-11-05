@@ -1,83 +1,83 @@
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { WhatsAppIcon } from "./WhatsAppIcon";
+import { whatsappLink } from "@/lib/contact";
 import fotohero from "@/assets/fotohero.png";
 
-const WHATSAPP_URL = "https://wa.me/antoniomelo.consultoriabh?text=Ol%C3%A1%21+Quero+vender+mais+no+iFood%21";
+const WHATSAPP_URL = whatsappLink(
+  "Olá! Quero conversar sobre a gestão da minha loja de delivery."
+);
 
-const badges = [
-  "Gestão diária",
-  "Estratégia + execução",
-  "100% personalizada",
+const proofs = [
+  "Mais de 1.500 lojas atendidas",
+  "Gestão com execução no dia a dia",
+  "Direcionado a donos, gestores e operadores",
 ];
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[100svh] flex items-center pt-24 pb-12 lg:pt-28 lg:pb-16 overflow-hidden noise-bg">
-      {/* Background effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_hsl(0_85%_40%/0.15),transparent_60%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_hsl(280_80%_40%/0.1),transparent_60%)]" />
-      <div className="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-[100px]" />
-      <div className="absolute bottom-20 left-10 w-96 h-96 bg-accent/10 rounded-full blur-[120px]" />
+    <section className="relative overflow-hidden py-16 lg:py-24 noise-bg">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_hsl(22_70%_40%/0.16),transparent_58%)]" />
 
       <div className="container relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid items-center gap-12 lg:grid-cols-2">
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 sm:px-4 sm:py-1.5 rounded-full border border-primary/30 bg-primary/10 text-xs sm:text-sm text-primary mb-4 sm:mb-6">
-              <span className="w-2 h-2 rounded-full bg-primary animate-pulse-glow" />
-              Especialistas em delivery
-            </div>
-
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold leading-tight mb-4 sm:mb-6">
-              GESTÃO PROFISSIONAL DE LOJA NO{" "}
-              <span className="gradient-text">IFOOD</span>
+            <p className="mb-4 text-sm font-medium uppercase tracking-widest text-primary">
+              AM Consultoria
+            </p>
+            <h1 className="mb-5 font-display text-4xl font-semibold leading-tight sm:text-5xl">
+              Gestão profissional para quem conduz o delivery
             </h1>
-
-            <p className="text-base sm:text-lg text-muted-foreground mb-3 sm:mb-4 max-w-xl leading-relaxed">
-              Seu delivery nas mãos de especialistas focados em <strong className="text-foreground">crescimento e lucro</strong>.
+            <p className="mb-4 max-w-xl text-lg leading-relaxed text-muted-foreground">
+              Consultoria para donos, gestores e operadores que precisam de método nas plataformas, sem abandonar a cozinha.
             </p>
-            <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8 max-w-xl">
-              Se sua loja está estagnada no iFood, se você está perdendo dinheiro com fraudes e cancelamentos indevidos ou você precisa otimizar o seu tempo, deixe sua gestão com a gente e foque apenas na produção dos pratos!
+            <p className="mb-8 max-w-xl text-base leading-relaxed text-muted-foreground">
+              A AM Consultoria assume a leitura da loja, o cardápio e o acompanhamento da operação para que o crescimento venha com lucro e com menos improviso.
             </p>
 
-            <div className="flex flex-col sm:flex-row flex-wrap gap-3 mb-8">
+            <div className="mb-8 flex flex-col gap-3 sm:flex-row">
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                <Button size="lg" className="w-full bg-gradient-to-r from-primary to-accent hover:from-[#25D366] hover:to-[#20BD5A] text-primary-foreground hover:text-white transition-all duration-300 gap-2 glow-primary text-sm sm:text-base px-6 sm:px-8 border-none">
-                  <WhatsAppIcon className="w-5 h-5 shrink-0" />
-                  <span className="truncate">QUERO VENDER MAIS NO IFOOD</span>
+                <Button size="lg" className="min-h-11 w-full cursor-pointer gap-2 bg-primary text-primary-foreground hover:bg-primary/90">
+                  <WhatsAppIcon className="h-5 w-5 shrink-0" />
+                  Falar com a consultoria
                 </Button>
               </a>
+              <Button
+                size="lg"
+                variant="outline"
+                className="min-h-11 w-full cursor-pointer border-border bg-transparent sm:w-auto hover:bg-secondary"
+                onClick={() => document.querySelector("#planos")?.scrollIntoView({ behavior: "smooth" })}
+              >
+                Ver formas de contratação
+              </Button>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-              {badges.map((badge) => (
-                <span key={badge} className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground">
-                  <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
-                  {badge}
-                </span>
+            <ul className="space-y-3">
+              {proofs.map((item) => (
+                <li key={item} className="flex items-center gap-2 text-sm text-muted-foreground sm:text-base">
+                  <CheckCircle2 className="h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
+                  {item}
+                </li>
               ))}
-            </div>
+            </ul>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-            className="flex items-center justify-center w-full h-full relative mt-8 lg:mt-0"
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="rounded-2xl border border-border/60 bg-card p-3 sm:p-4"
           >
-            {/* Imagem Hero */}
-            <div className="w-full aspect-video rounded-3xl overflow-hidden shadow-2xl shadow-primary/20 border border-primary/20 bg-card/30 flex items-center justify-center backdrop-blur-sm p-2 sm:p-4">
-              <img
-                src={fotohero}
-                alt="AM Consultoria Hero"
-                className="w-full h-full object-contain hover:scale-105 transition-transform duration-700"
-              />
-            </div>
+            <img
+              src={fotohero}
+              alt="Painel de acompanhamento da operação de delivery"
+              className="aspect-video w-full rounded-xl object-contain"
+            />
           </motion.div>
         </div>
       </div>

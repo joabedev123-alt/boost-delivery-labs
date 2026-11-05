@@ -48,12 +48,12 @@ const AboutSection = () => {
                         viewport={{ once: true }}
                         className="order-1 lg:order-2"
                     >
-                        <span className="text-sm text-primary font-medium uppercase tracking-widest block mb-3">Quem Somos</span>
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold leading-tight mb-6">
-                            Antônio Melo <span className="gradient-text">Soluções em Delivery</span>
+                        <span className="text-sm text-primary font-medium uppercase tracking-widest block mb-3">A empresa</span>
+                        <h2 className="text-3xl sm:text-4xl font-display font-semibold leading-tight mb-6">
+                            Antônio Melo Soluções em Delivery
                         </h2>
 
-                        <div className="space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed lg:overflow-y-auto pr-0 lg:pr-4" style={{ maxHeight: "none", lg: { maxHeight: "400px" } } as any}>
+                        <div className="space-y-4 text-base text-muted-foreground leading-relaxed">
                             <p>
                                 A Antônio Melo Soluções em Delivery nasceu da percepção clara de uma oportunidade pouco explorada no mercado brasileiro: a gestão estratégica de plataformas de delivery.
                             </p>
