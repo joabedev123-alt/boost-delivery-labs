@@ -18,7 +18,8 @@ const proofs = [
 const HeroSection = () => {
   return (
     <section className="relative overflow-hidden py-16 lg:py-24 noise-bg">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_hsl(22_70%_40%/0.16),transparent_58%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_hsl(0_85%_40%/0.18),transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_hsl(280_80%_40%/0.14),transparent_60%)]" />
 
       <div className="container relative z-10">
         <div className="grid items-center gap-12 lg:grid-cols-2">
@@ -42,7 +43,7 @@ const HeroSection = () => {
 
             <div className="mb-8 flex flex-col gap-3 sm:flex-row">
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                <Button size="lg" className="min-h-11 w-full cursor-pointer gap-2 bg-primary text-primary-foreground hover:bg-primary/90">
+                <Button size="lg" className="min-h-11 w-full cursor-pointer gap-2 text-primary-foreground">
                   <WhatsAppIcon className="h-5 w-5 shrink-0" />
                   Falar com a consultoria
                 </Button>

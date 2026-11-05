@@ -59,7 +59,7 @@ const Header = () => {
 
         <div className="hidden xl:flex">
           <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-            <Button className="min-h-11 cursor-pointer gap-2 bg-primary text-primary-foreground hover:bg-primary/90">
+            <Button className="min-h-11 cursor-pointer gap-2 text-primary-foreground">
               <WhatsAppIcon className="h-4 w-4" />
               Falar com a consultoria
             </Button>
@@ -100,7 +100,7 @@ const Header = () => {
                 </NavLink>
               ))}
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="mt-2">
-                <Button className="min-h-11 w-full cursor-pointer gap-2 bg-primary text-primary-foreground hover:bg-primary/90">
+                <Button className="min-h-11 w-full cursor-pointer gap-2 text-primary-foreground">
                   <WhatsAppIcon className="h-4 w-4" />
                   Falar com a consultoria
                 </Button>

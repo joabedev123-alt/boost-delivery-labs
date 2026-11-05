@@ -214,7 +214,7 @@ const FormacaoPage = () => {
               As vagas da primeira turma são limitadas. A formação desenvolve método, prática e visão de negócio. Os resultados de cada aluno dependem da dedicação, da experiência e da carteira que construir.
             </p>
             <a href={FORMACAO_WHATSAPP} target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex w-full sm:w-auto">
-              <Button size="lg" className="w-full cursor-pointer bg-primary text-primary-foreground hover:bg-primary/90">
+              <Button size="lg" className="w-full cursor-pointer text-primary-foreground">
                 Quero garantir minha vaga
               </Button>
             </a>

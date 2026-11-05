@@ -85,10 +85,6 @@ const offerings = [
 
 const faqs = [
   {
-    q: "Por que a gestão não tem um preço único publicado?",
-    a: "Porque o plano é desenhado na estrutura da loja. Uma operação de uma marca, no primeiro mês, não pede o mesmo escopo de uma rede que já vende todos os dias.",
-  },
-  {
     q: "Dá para contratar só o cardápio ou só a análise?",
     a: "Sim. A implementação de cardápio pode ser contratada sozinha. A análise de loja também: custa R$ 500 e entrega o relatório com histórico, problemas, soluções, leitura dos concorrentes do nicho e os ajustes para evoluir nas plataformas.",
   },

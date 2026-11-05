@@ -55,7 +55,7 @@ const GarconetPage = () => {
             </ul>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a href={GARCONET_URL} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                <Button size="lg" className="w-full cursor-pointer gap-2 bg-primary text-primary-foreground hover:bg-primary/90">
+                <Button size="lg" className="w-full cursor-pointer gap-2 text-primary-foreground">
                   Contratar o Garçonet
                   <ArrowUpRight className="h-4 w-4" />
                 </Button>

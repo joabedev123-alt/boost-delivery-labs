@@ -114,7 +114,7 @@ const ContactSection = () => {
             />
           </div>
           <div className="flex flex-col sm:flex-row gap-3 pt-2">
-            <Button type="submit" className="min-h-11 w-full sm:flex-1 cursor-pointer bg-primary text-primary-foreground hover:bg-primary/90 gap-2">
+            <Button type="submit" className="min-h-11 w-full sm:flex-1 cursor-pointer text-primary-foreground gap-2">
               <Send className="w-4 h-4" />
               Enviar
             </Button>

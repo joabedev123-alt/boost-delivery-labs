@@ -91,7 +91,7 @@ const SolucoesPage = () => {
                         Com o custo real do que sai para a entrega, a precificação e o cardápio passam a sair da cozinha.
                       </p>
                       <a href={CMV_WHATSAPP} target="_blank" rel="noopener noreferrer">
-                        <Button className="w-full cursor-pointer gap-2 bg-primary text-primary-foreground hover:bg-primary/90">
+                        <Button className="w-full cursor-pointer gap-2 text-primary-foreground">
                           <WhatsAppIcon className="h-4 w-4" />
                           Falar sobre esse serviço
                         </Button>

@@ -60,7 +60,8 @@ const Index = () => {
   return (
     <>
       <section className="relative overflow-hidden py-16 lg:py-24">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_hsl(22_70%_40%/0.16),transparent_58%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_hsl(0_85%_40%/0.18),transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_hsl(280_80%_40%/0.14),transparent_60%)]" />
         <div className="container relative z-10 grid items-center gap-12 lg:grid-cols-2">
           <div>
             <p className="mb-4 text-sm font-medium uppercase tracking-widest text-primary">AM Consultoria</p>
@@ -74,7 +75,7 @@ const Index = () => {
               Cada assunto do site tem a própria página: a empresa, as soluções, os planos, a formação, o Garçonet e os clientes.
             </p>
             <div className="mb-8 flex flex-col gap-3 sm:flex-row">
-              <Button asChild size="lg" className="w-full cursor-pointer bg-primary text-primary-foreground hover:bg-primary/90 sm:w-auto">
+              <Button asChild size="lg" className="w-full cursor-pointer text-primary-foreground sm:w-auto">
                 <Link to="/contato">Falar com a consultoria</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="w-full cursor-pointer border-border bg-transparent hover:bg-secondary sm:w-auto">
@@ -114,7 +115,7 @@ const Index = () => {
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a href={FORMACAO_WHATSAPP} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                <Button size="lg" className="w-full cursor-pointer bg-primary text-primary-foreground hover:bg-primary/90">
+                <Button size="lg" className="w-full cursor-pointer text-primary-foreground">
                   Quero garantir minha vaga
                 </Button>
               </a>
