@@ -92,15 +92,32 @@ const FormacaoPage = () => {
       <PageIntro
         kicker="1ª turma de gestores e mentorados"
         title="Formação Gestor de Delivery 360º"
-        lead="Uma formação profissional para quem quer diagnosticar, estruturar e gerenciar operações de delivery com método. São 60 horas, em formato híbrido: presencial em Belo Horizonte ou online ao vivo."
+        lead="Uma formação profissional voltada para quem deseja dominar a gestão de operações no iFood, na 99Food e nos demais marketplaces de food, aprendendo técnicas, ferramentas e estratégias utilizadas no dia a dia de restaurantes de verdade."
       />
 
       <section className="py-16 lg:py-24">
         <div className="container grid gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">
           <div className="max-w-3xl space-y-5 text-base leading-relaxed text-muted-foreground">
-            <h2 className="font-display text-3xl font-semibold text-foreground">Sobre a formação</h2>
+            <h2 className="font-display text-2xl font-semibold leading-tight text-foreground sm:text-3xl">
+              Você está preparado para entrar em uma das profissões que mais ganham espaço no Brasil?
+            </h2>
             <p>
-              A Formação Gestor de Delivery 360º não é só mais um curso de iFood. Ela prepara profissionais para assumir uma operação de delivery de ponta a ponta.
+              O mercado de delivery está em plena transformação. Milhares de restaurantes precisam de profissionais qualificados para administrar suas operações, aumentar suas vendas, melhorar seus resultados e conquistar espaço nas maiores plataformas de entrega do país.
+            </p>
+            <p>
+              É nesse cenário que surge uma grande oportunidade: a profissão de gestor de delivery.
+            </p>
+            <p>
+              O gestor é o profissional que transforma dados em estratégias, cardápios em vendas e restaurantes em negócios mais competitivos e lucrativos.
+            </p>
+            <p>
+              E agora você pode aprender essa profissão com quem vive o mercado na prática.
+            </p>
+            <h3 className="pt-2 font-display text-2xl font-semibold text-foreground">
+              Conheça o curso de formação de gestores de delivery
+            </h3>
+            <p>
+              A Formação Gestor de Delivery 360º prepara profissionais para assumir uma operação de delivery de ponta a ponta. São 60 horas, em formato híbrido: presencial em Belo Horizonte ou online ao vivo.
             </p>
             <p>
               Isso inclui entender o que realmente define o desempenho de uma loja: preço, CMV, cardápio, promoções, anúncios, conversão, atendimento, operação, conciliação e relacionamento com o cliente.

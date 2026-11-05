@@ -1,14 +1,35 @@
 import {
-  Search, UtensilsCrossed, DollarSign, Rocket, Tag, Trophy,
+  Search, UtensilsCrossed, DollarSign, ChefHat, Rocket, Tag, Trophy,
   MessageSquare, ShieldCheck, Eye, FileText, Users, MessageCircle,
 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import PageIntro from "@/components/PageIntro";
 import RelatedLinks from "@/components/RelatedLinks";
+import { whatsappLink } from "@/lib/contact";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
+
+const CMV_WHATSAPP = whatsappLink(
+  "Olá! Quero detalhes do serviço de CMV e ficha técnica para a minha operação.",
+);
 
 const services = [
   { icon: Search, title: "Análise estratégica da loja", text: "Leitura do histórico, da reputação e do que a plataforma está premiando ou punindo naquela operação." },
   { icon: UtensilsCrossed, title: "Estruturação do cardápio", text: "Categorias, fotos, descrições e ordem dos itens para converter quem já chegou na loja." },
   { icon: DollarSign, title: "Precificação", text: "Preço que conversa com a margem da cozinha e com o que o cliente aceita pagar no aplicativo." },
+  {
+    icon: ChefHat,
+    title: "CMV e ficha técnica",
+    text: "Enviamos nosso chef de cozinha até a sua operação.",
+    details: true,
+  },
   { icon: Rocket, title: "Estratégia de vendas", text: "Ações de visibilidade alinhadas à capacidade real de produção, sem prometer um volume que a cozinha não segura." },
   { icon: Tag, title: "Cupons, anúncios e promoções", text: "Campanha com objetivo. Desconto solto, que só come a margem, não entra como plano." },
   { icon: Trophy, title: "Ranqueamento", text: "Ajustes contínuos nos fatores que mudam a posição da loja dentro da plataforma." },
@@ -46,12 +67,38 @@ const SolucoesPage = () => {
         <div className="container">
           <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
             {services.map((service) => (
-              <article key={service.title} className="rounded-2xl border border-border/60 bg-card p-6">
+              <article key={service.title} className="flex flex-col rounded-2xl border border-border/60 bg-card p-6">
                 <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10">
                   <service.icon className="h-5 w-5 text-primary" aria-hidden="true" />
                 </div>
                 <h2 className="font-display text-xl font-semibold">{service.title}</h2>
                 <p className="mt-3 text-base leading-relaxed text-muted-foreground">{service.text}</p>
+                {"details" in service && service.details ? (
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button variant="outline" className="mt-5 w-full cursor-pointer border-border bg-transparent hover:bg-secondary">
+                        Detalhes
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="w-[calc(100%-2rem)] max-w-lg rounded-lg">
+                      <DialogHeader>
+                        <DialogTitle className="font-display text-2xl">CMV e ficha técnica</DialogTitle>
+                        <DialogDescription className="pt-2 text-base leading-relaxed">
+                          Enviamos nosso chef de cozinha até a sua operação para montar a ficha técnica dos pratos e calcular o CMV de cada item.
+                        </DialogDescription>
+                      </DialogHeader>
+                      <p className="text-base leading-relaxed text-muted-foreground">
+                        Com o custo real do que sai para a entrega, a precificação e o cardápio passam a sair da cozinha.
+                      </p>
+                      <a href={CMV_WHATSAPP} target="_blank" rel="noopener noreferrer">
+                        <Button className="w-full cursor-pointer gap-2 bg-primary text-primary-foreground hover:bg-primary/90">
+                          <WhatsAppIcon className="h-4 w-4" />
+                          Falar sobre esse serviço
+                        </Button>
+                      </a>
+                    </DialogContent>
+                  </Dialog>
+                ) : null}
               </article>
             ))}
           </div>

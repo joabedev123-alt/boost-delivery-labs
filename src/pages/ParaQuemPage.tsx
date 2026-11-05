@@ -67,7 +67,7 @@ const ParaQuemPage = () => {
       <section className="border-t border-border/60 py-16 lg:py-24">
         <div className="container grid gap-10 lg:grid-cols-2">
           <div>
-            <h2 className="font-display text-3xl font-semibold">Cozinhas com as quais a casa já trabalha</h2>
+            <h2 className="font-display text-2xl font-semibold leading-tight sm:text-3xl">Multicozinhas com as quais a casa já trabalha</h2>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
               A estratégia muda com o nicho. O método não muda: ler a loja, ajustar o cardápio e acompanhar o que a plataforma faz com a reputação.
             </p>

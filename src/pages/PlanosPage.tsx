@@ -20,7 +20,7 @@ const offerings = [
     description:
       "Planos personalizados, desenhados de acordo com a estrutura do negócio. O escopo e o ritmo saem do diagnóstico, não de um pacote fechado de meses.",
     detail:
-      "Entra a gestão da loja nas plataformas, o acompanhamento da operação e a definição de prioridades com quem responde pelo negócio. O valor é conversado depois que a estrutura da loja está clara.",
+      "Entra a gestão da loja nas plataformas, o acompanhamento da operação e a definição de prioridades com quem responde pelo negócio. Orçamento/cobrança de acordo com os serviços contratados.",
     points: [
       "Gestão da loja nas plataformas",
       "Acompanhamento da operação",

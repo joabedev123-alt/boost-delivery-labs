@@ -99,9 +99,9 @@ const GarconetPage = () => {
 
       <section className="border-t border-border/60 py-16">
         <div className="container max-w-3xl">
-          <h2 className="font-display text-3xl font-semibold">Garçonet e consultoria não são a mesma coisa</h2>
+          <h2 className="font-display text-3xl font-semibold">Atendimento no chat e controle dos pedidos</h2>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-            A consultoria conduz a estratégia da loja nas plataformas: cardápio, preço, campanha e acompanhamento. O Garçonet atua na operação do expediente, quando o erro interno precisa ser visto e tratado na hora. Os dois podem conviver. A contratação do produto é direta, no painel do Garçonet.
+            O Garçonet é um recurso que auxilia e atua num gargalo importante das operações, que é o atendimento ao cliente no chat e a melhora dos parâmetros com automações para despacho e controle operacional dos pedidos.
           </p>
         </div>
       </section>

@@ -53,7 +53,7 @@ const ContatoPage = () => {
               </a>
               <a href="mailto:antoniomelo.consultoriabh@gmail.com" className="flex items-start gap-3 hover:text-foreground">
                 <Mail className="mt-1 h-4 w-4 shrink-0" />
-                <span>antoniomelo.consultoriabh@gmail.com</span>
+                <span className="break-all">antoniomelo.consultoriabh@gmail.com</span>
               </a>
               <div className="flex items-start gap-3">
                 <MapPin className="mt-1 h-4 w-4 shrink-0" />

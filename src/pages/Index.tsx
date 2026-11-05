@@ -110,7 +110,7 @@ const Index = () => {
               Formação Gestor de Delivery 360º
             </h2>
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Uma formação profissional para quem quer diagnosticar, estruturar e gerenciar operações de delivery com método. São 60 horas de aulas práticas sobre iFood, 99Food, cardápio, precificação, dados, IA e gestão de clientes, em formato híbrido, presencial em BH ou online ao vivo.
+              Uma formação profissional para dominar a gestão de operações no iFood, na 99Food e nos demais marketplaces de food, com técnicas usadas no dia a dia de restaurantes de verdade. São 60 horas, em formato híbrido: presencial em Belo Horizonte ou online ao vivo.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a href={FORMACAO_WHATSAPP} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
