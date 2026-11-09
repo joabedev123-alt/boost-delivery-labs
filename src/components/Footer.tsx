@@ -24,10 +24,10 @@ const Footer = () => {
           </div>
           <div>
             <div className="mb-6">
-              <img src="/WhatsApp Image 2026-03-03 at 11.50.48.jpeg" alt="AM Consultoria" className="h-16 w-auto max-w-full object-contain sm:h-24" />
+              <img src="/WhatsApp Image 2026-03-03 at 11.50.48.jpeg" alt="Antônio Melo | Soluções em Delivery" className="h-16 w-auto max-w-full object-contain sm:h-24" />
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Consultoria de gestão para donos, gestores e operadores de delivery.
+              Antônio Melo | Soluções em Delivery. Gestão de iFood e 99Food, com foco em pedido e margem.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <a href="https://www.instagram.com/antoniomelo.bh?utm_source=qr&igsh=MnF1a3o1OGgzM2Fw" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-secondary transition-colors hover:bg-primary/20 group">
@@ -76,7 +76,7 @@ const Footer = () => {
 
         <div className="section-divider mt-12 mb-6" />
         <p className="text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} AM Consultoria. Todos os direitos reservados.
+          © {new Date().getFullYear()} Antônio Melo | Soluções em Delivery. Todos os direitos reservados.
         </p>
         <div className="flex justify-center mt-6">
           <a

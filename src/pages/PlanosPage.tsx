@@ -13,70 +13,74 @@ import {
 
 const offerings = [
   {
-    name: "Gestão personalizada",
+    id: "gestao",
+    name: "Gestão contínua",
     kicker: "Consultoria contínua",
     price: null as string | null,
-    priceNote: "Desenhado conforme a estrutura da loja",
+    priceNote: "Valor fechado depois da análise, conforme lojas e plataformas",
     description:
-      "Planos personalizados, desenhados de acordo com a estrutura do negócio. O escopo e o ritmo saem do diagnóstico, não de um pacote fechado de meses.",
+      "Assumimos a gestão da sua loja no iFood e, se você estiver lá, na 99Food e na Keeta.",
     detail:
-      "Entra a gestão da loja nas plataformas, o acompanhamento da operação e a definição de prioridades com quem responde pelo negócio. Orçamento/cobrança de acordo com os serviços contratados.",
+      "Entra cardápio, preço, promoção, avaliação, cancelamento e o acompanhamento no horário de venda. O valor depende do número de lojas e plataformas e é fechado depois da análise.",
     points: [
-      "Gestão da loja nas plataformas",
-      "Acompanhamento da operação",
-      "Prioridades definidas com o responsável pela loja",
+      "Gestão da loja no iFood e, quando houver, na 99Food e na Keeta",
+      "Acompanhamento no horário em que a loja vende",
+      "Prioridades definidas com quem responde pela loja",
     ],
-    cta: "Falar sobre a gestão",
-    message: "Olá! Quero um plano de gestão personalizado para a minha loja.",
+    cta: "Quero a gestão da minha loja",
+    message: "Olá! Quero a gestão contínua da minha loja.",
   },
   {
+    id: "cardapio",
     name: "Implementação de cardápio",
     kicker: "Contratação avulsa",
     price: null,
-    priceNote: "Somente o cardápio",
+    priceNote: "Somente o cardápio, sem a mensalidade da gestão",
     description:
-      "Contratação exclusiva para estruturar e implementar o cardápio, sem a gestão contínua da loja.",
+      "Cardápio reorganizado e publicado: categorias, ordem, descrições, fotos orientadas e combos.",
     detail:
-      "Serve para quem precisa organizar categorias, itens e a apresentação que converte, e não quer, neste momento, um acompanhamento diário.",
+      "Serve para quem precisa do cardápio convertendo e, neste momento, não quer o acompanhamento diário.",
     points: [
-      "Organização de categorias e itens",
-      "Ajustes de apresentação e conversão",
-      "Entrega focada na implementação do cardápio",
+      "Categorias, ordem e descrições",
+      "Orientação de fotos e combos",
+      "Publicação focada no cardápio",
     ],
-    cta: "Contratar o cardápio",
+    cta: "Quero arrumar meu cardápio",
     message: "Olá! Quero contratar somente a implementação de cardápio.",
   },
   {
+    id: "analise",
     name: "Análise de loja",
-    kicker: "Diagnóstico",
+    kicker: "Porta de entrada",
     price: "R$ 500",
-    priceNote: "Relatório completo",
+    priceNote: "Relatório para saber o que está travando as vendas",
     description:
-      "Contratação somente da análise. A entrega é um relatório detalhado para orientar a evolução da loja nas plataformas.",
+      "A análise avulsa é o caminho para quem quer uma ideia clara antes de contratar a gestão.",
     detail:
-      "O relatório cobre o histórico da loja, aponta problemas e soluções, mostra pontos fortes dos concorrentes no nicho da cozinha e indica os ajustes para uma evolução consistente.",
+      "O relatório cobre o histórico da loja, aponta problemas e soluções, mostra pontos fortes dos concorrentes no nicho da cozinha e indica os ajustes para evoluir nas plataformas.",
     points: [
       "Histórico da loja",
-      "Sinalização de problemas e soluções",
+      "Problemas, soluções e o que fazer primeiro",
       "Pontos fortes dos concorrentes no nicho da cozinha",
-      "Ajustes necessários e direcionamentos para uma evolução consistente",
+      "Ajustes para evoluir nas plataformas",
     ],
-    cta: "Contratar a análise",
+    cta: "Quero uma análise da minha loja",
     message: "Olá! Quero contratar a análise de loja por R$ 500.",
   },
   {
+    id: "lojas-novas",
     name: "Lojas novas",
     kicker: "Condição de entrada",
     price: null,
-    priceNote: "Condições especiais",
+    priceNote: "Condição econômica para quem está abrindo",
     description:
-      "Planos especiais e econômicos para lojas novas, alinhados a quem ainda está estruturando a operação.",
+      "Planos especiais e econômicos para lojas novas, com a entrada pensada para quem ainda está estruturando a operação.",
     detail:
-      "A entrada é pensada para quem está começando: presença inicial nas plataformas e condições conversadas de acordo com o momento da loja, sem a tabela de uma operação já madura.",
+      "Entra o cadastro, o cardápio inicial e as primeiras promoções configuradas. A condição é conversada a partir do estágio da loja, sem a tabela de uma operação já madura.",
     points: [
-      "Entrada pensada para quem está começando",
-      "Organização inicial da presença nas plataformas",
-      "Condições conversadas de acordo com a loja",
+      "Cadastro nas plataformas",
+      "Cardápio inicial",
+      "Primeiras promoções configuradas",
     ],
     cta: "Falar sobre loja nova",
     message: "Olá! Tenho uma loja nova e quero conhecer os planos especiais.",
@@ -84,6 +88,18 @@ const offerings = [
 ];
 
 const faqs = [
+  {
+    q: "Quanto custa a gestão?",
+    a: "O valor depende do número de lojas e plataformas e é fechado depois da análise. A análise avulsa, para quem quer começar por ela, custa R$ 500.",
+  },
+  {
+    q: "Vocês atendem 99Food e Keeta?",
+    a: "Sim. A base do trabalho é o iFood. Quando a loja também está na 99Food ou na Keeta, cardápio e estratégia entram no conjunto, sem tratar cada marca como uma loja solta.",
+  },
+  {
+    q: "Que acesso vocês precisam da minha conta do iFood?",
+    a: "O acesso de gestão no Portal do Parceiro, combinado na conversa, para cardápio, promoções, avaliações e os relatórios da loja.",
+  },
   {
     q: "Dá para contratar só o cardápio ou só a análise?",
     a: "Sim. A implementação de cardápio pode ser contratada sozinha. A análise de loja também: custa R$ 500 e entrega o relatório com histórico, problemas, soluções, leitura dos concorrentes do nicho e os ajustes para evoluir nas plataformas.",
@@ -104,13 +120,13 @@ const PlanosPage = () => {
       <PageIntro
         kicker="Planos"
         title="Formas de contratar, sem pacote genérico"
-        lead="A gestão contínua é personalizada. Também é possível contratar só a implementação do cardápio, só a análise da loja ou uma condição para quem está começando."
+        lead="A análise de R$ 500 é a porta de entrada. A gestão contínua, o cardápio e a condição para loja nova são fechados depois que a estrutura da operação está clara."
       />
 
       <section className="py-16 lg:py-24">
         <div className="container grid gap-6 lg:grid-cols-2">
           {offerings.map((offer) => (
-            <article key={offer.name} className="flex flex-col rounded-2xl border border-border/60 bg-card p-6 sm:p-8">
+            <article id={offer.id} key={offer.name} className="flex scroll-mt-24 flex-col rounded-2xl border border-border/60 bg-card p-6 sm:p-8">
               <p className="text-xs font-medium uppercase tracking-widest text-primary">{offer.kicker}</p>
               <h2 className="mt-2 font-display text-3xl font-semibold">{offer.name}</h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground">{offer.description}</p>
@@ -119,7 +135,7 @@ const PlanosPage = () => {
                 {offer.price ? (
                   <p className="font-display text-4xl font-semibold">{offer.price}</p>
                 ) : (
-                  <p className="font-display text-2xl font-semibold">Sob conversa</p>
+                  <p className="font-display text-2xl font-semibold">Orçamento conforme a loja</p>
                 )}
                 <p className="mt-1 text-sm text-muted-foreground">{offer.priceNote}</p>
               </div>

@@ -17,15 +17,15 @@ const moments = [
     text: "Quem não está no salão ou na cozinha só descobre o problema quando a avaliação já foi publicada. O Garçonet informa o proprietário sobre onde a operação travou.",
   },
   {
-    title: "A intercorrência precisa de dono",
-    text: "Não basta registrar a insatisfação. Alguém precisa atender o caso enquanto o expediente segue, para a loja manter ou recuperar a reputação.",
+    title: "O problema no pedido precisa de dono",
+    text: "Atraso, item errado e cliente reclamando não podem esperar o fim do dia. Alguém atende o caso na hora, para a reclamação não virar avaliação ruim.",
   },
 ];
 
 const points = [
   "Ajuda a manter ou recuperar a reputação perdida por erros internos",
   "Mostra aos proprietários os gargalos da operação",
-  "Organiza o atendimento das intercorrências durante o expediente",
+  "Resolve atraso, item errado e reclamação na hora em que acontecem",
   "Reduz a insatisfação do cliente no momento em que ela acontece",
 ];
 
@@ -34,16 +34,16 @@ const GarconetPage = () => {
     <>
       <PageIntro
         kicker="Produto"
-        title="Garçonet para a operação do expediente"
-        lead="Uma solução para a loja manter ou recuperar a reputação afetada por erros internos, com o dono informado e a intercorrência atendida enquanto o serviço acontece."
+        title="Atendimento do chat e controle dos pedidos"
+        lead="O Garçonet atua no chat do iFood na hora do problema, avisa o dono onde a operação travou e usa automações de despacho e controle dos pedidos, para a reclamação não virar avaliação ruim."
       />
 
       <section className="py-16 lg:py-24">
         <div className="container grid items-start gap-10 lg:grid-cols-2">
           <div>
-            <h2 className="font-display text-3xl font-semibold">O que o produto resolve</h2>
+            <h2 className="font-display text-3xl font-semibold">Como funciona</h2>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              O Garçonet organiza a operação no horário de venda. Ele ameniza a insatisfação do cliente, mostra os gargalos para os proprietários e melhora o atendimento das intercorrências durante o expediente.
+              O atendimento entra no chat quando o cliente reclama. O dono recebe onde a operação travou. O despacho e o controle dos pedidos seguem com automação, no horário de venda.
             </p>
             <ul className="mt-8 space-y-3">
               {points.map((point) => (

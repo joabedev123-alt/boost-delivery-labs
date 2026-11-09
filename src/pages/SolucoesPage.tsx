@@ -1,6 +1,6 @@
 import {
   Search, UtensilsCrossed, DollarSign, ChefHat, Rocket, Tag, Trophy,
-  MessageSquare, ShieldCheck, Eye, FileText, Users, MessageCircle,
+  MessageSquare, ShieldCheck, Eye, MessageCircle, Receipt,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -20,32 +20,41 @@ const CMV_WHATSAPP = whatsappLink(
   "Olá! Quero detalhes do serviço de CMV e ficha técnica para a minha operação.",
 );
 
-const services = [
-  { icon: Search, title: "Análise estratégica da loja", text: "Leitura do histórico, da reputação e do que a plataforma está premiando ou punindo naquela operação." },
-  { icon: UtensilsCrossed, title: "Estruturação do cardápio", text: "Categorias, fotos, descrições e ordem dos itens para converter quem já chegou na loja." },
-  { icon: DollarSign, title: "Precificação", text: "Preço que conversa com a margem da cozinha e com o que o cliente aceita pagar no aplicativo." },
+const groups = [
   {
-    icon: ChefHat,
-    title: "CMV e ficha técnica",
-    text: "Enviamos nosso chef de cozinha até a sua operação.",
-    details: true,
+    title: "Vender mais",
+    items: [
+      { icon: Search, title: "Análise da loja", text: "Histórico, reputação e o que a plataforma está premiando ou punindo naquela operação." },
+      { icon: UtensilsCrossed, title: "Cardápio", text: "Categorias, fotos, descrições e ordem dos itens para converter quem já chegou na loja." },
+      { icon: Rocket, title: "Estratégia de vendas", text: "Ações de visibilidade alinhadas à capacidade real de produção, sem prometer um volume que a cozinha não segura." },
+      { icon: Tag, title: "Promoções e anúncios", text: "Toda promoção entra com meta e conta feita: quanto custa, quem paga o desconto e quanto volta em pedidos. Desconto que só come margem não entra." },
+      { icon: Trophy, title: "Ranqueamento", text: "Ajustes contínuos nos fatores que mudam a posição da loja dentro da plataforma." },
+    ],
   },
-  { icon: Rocket, title: "Estratégia de vendas", text: "Ações de visibilidade alinhadas à capacidade real de produção, sem prometer um volume que a cozinha não segura." },
-  { icon: Tag, title: "Cupons, anúncios e promoções", text: "Campanha com objetivo. Desconto solto, que só come a margem, não entra como plano." },
-  { icon: Trophy, title: "Ranqueamento", text: "Ajustes contínuos nos fatores que mudam a posição da loja dentro da plataforma." },
-  { icon: MessageSquare, title: "Respostas a avaliações", text: "Resposta com critério, para proteger a reputação e devolver um recado útil para a equipe." },
-  { icon: ShieldCheck, title: "Contestação de cancelamentos", text: "Defesa do que foi cancelado de forma indevida e leitura do que está gerando perda de verdade." },
-  { icon: Eye, title: "Acompanhamento diário", text: "Olho na operação no horário em que a loja vende, não só uma auditoria no fim do mês." },
-  { icon: FileText, title: "Relatórios", text: "O que mudou, o que segurou o resultado e o que entra como prioridade no próximo ciclo." },
-  { icon: Users, title: "Reuniões com o responsável", text: "Conversa para decidir o que a loja vai fazer, com quem de fato responde pela operação." },
-  { icon: MessageCircle, title: "Suporte no WhatsApp", text: "Grupo exclusivo da operação, de segunda a domingo, das 9h às 22h45, no horário do chat do iFood." },
+  {
+    title: "Lucrar mais",
+    items: [
+      { icon: DollarSign, title: "Precificação", text: "Preço que conversa com a margem da cozinha e com o que o cliente aceita pagar no aplicativo." },
+      { icon: ChefHat, title: "Ficha técnica e CMV", text: "Nosso chef vai até a sua cozinha, mede as receitas e calcula quanto custa cada prato. É a base para um preço que não come a sua margem.", details: true },
+      { icon: Receipt, title: "Conciliação financeira", text: "Conferimos o repasse do iFood pedido a pedido: comissão, taxa de pagamento, antecipação e quem pagou cada desconto, a loja ou a plataforma. Você sabe quanto sobrou de verdade." },
+    ],
+  },
+  {
+    title: "Proteger a loja",
+    items: [
+      { icon: MessageSquare, title: "Respostas a avaliações", text: "Resposta com critério, para proteger a reputação e devolver um recado útil para a equipe." },
+      { icon: ShieldCheck, title: "Contestação de cancelamentos", text: "Defesa do que foi cancelado de forma indevida e leitura do que está gerando perda de verdade." },
+      { icon: Eye, title: "Acompanhamento diário", text: "A gente olha a loja no horário em que ela vende, não só no fechamento do mês." },
+      { icon: MessageCircle, title: "Suporte no WhatsApp", text: "Grupo exclusivo da operação, de segunda a domingo, das 9h às 22h45, no horário do chat do iFood." },
+    ],
+  },
 ];
 
 const steps = [
-  { title: "Diagnóstico", text: "A loja é lida antes de qualquer pacote. Histórico, cardápio, reputação e capacidade da cozinha entram juntos." },
-  { title: "Prioridade", text: "O responsável pela loja escolhe o que vem primeiro. Nem todo problema pede a mesma urgência." },
-  { title: "Execução", text: "Cardápio, campanha, resposta e contestação saem do papel e entram na plataforma." },
-  { title: "Acompanhamento", text: "O expediente mostra se a decisão segurou. O ciclo seguinte corrige o que não segurou." },
+  { title: "Análise da loja", text: "Histórico, cardápio, reputação e capacidade da cozinha entram juntos, antes de qualquer pacote." },
+  { title: "Prioridades com você", text: "Quem responde pela loja escolhe o que vem primeiro. Nem todo problema pede a mesma urgência." },
+  { title: "Execução na plataforma", text: "Cardápio, campanha, resposta e contestação saem do papel e entram no aplicativo." },
+  { title: "Acompanhamento e relatório", text: "O resultado da semana mostra se a decisão funcionou. Todo mês há relatório e a decisão do próximo passo." },
 ];
 
 const distinctions = [
@@ -60,48 +69,53 @@ const SolucoesPage = () => {
       <PageIntro
         kicker="Soluções"
         title="O que a consultoria conduz na loja"
-        lead="Da leitura da operação ao cardápio, às promoções e ao suporte do expediente. A prioridade é o iFood, com cuidado quando a loja também está em outras plataformas."
+        lead="Três frentes: vender mais, lucrar mais e proteger a loja. A prioridade é o iFood, com cuidado quando a operação também está na 99Food ou na Keeta."
       />
 
       <section className="py-16 lg:py-24">
-        <div className="container">
-          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-            {services.map((service) => (
-              <article key={service.title} className="flex flex-col rounded-2xl border border-border/60 bg-card p-6">
-                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10">
-                  <service.icon className="h-5 w-5 text-primary" aria-hidden="true" />
-                </div>
-                <h2 className="font-display text-xl font-semibold">{service.title}</h2>
-                <p className="mt-3 text-base leading-relaxed text-muted-foreground">{service.text}</p>
-                {"details" in service && service.details ? (
-                  <Dialog>
-                    <DialogTrigger asChild>
-                      <Button variant="outline" className="mt-5 w-full cursor-pointer border-border bg-transparent hover:bg-secondary">
-                        Detalhes
-                      </Button>
-                    </DialogTrigger>
-                    <DialogContent className="w-[calc(100%-2rem)] max-w-lg rounded-lg">
-                      <DialogHeader>
-                        <DialogTitle className="font-display text-2xl">CMV e ficha técnica</DialogTitle>
-                        <DialogDescription className="pt-2 text-base leading-relaxed">
-                          Enviamos nosso chef de cozinha até a sua operação para montar a ficha técnica dos pratos e calcular o CMV de cada item.
-                        </DialogDescription>
-                      </DialogHeader>
-                      <p className="text-base leading-relaxed text-muted-foreground">
-                        Com o custo real do que sai para a entrega, a precificação e o cardápio passam a sair da cozinha.
-                      </p>
-                      <a href={CMV_WHATSAPP} target="_blank" rel="noopener noreferrer">
-                        <Button className="w-full cursor-pointer gap-2 text-primary-foreground">
-                          <WhatsAppIcon className="h-4 w-4" />
-                          Falar sobre esse serviço
-                        </Button>
-                      </a>
-                    </DialogContent>
-                  </Dialog>
-                ) : null}
-              </article>
-            ))}
-          </div>
+        <div className="container space-y-14">
+          {groups.map((group) => (
+            <div key={group.title}>
+              <h2 className="font-display text-3xl font-semibold">{group.title}</h2>
+              <div className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+                {group.items.map((service) => (
+                  <article key={service.title} className="flex flex-col rounded-2xl border border-border/60 bg-card p-6">
+                    <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10">
+                      <service.icon className="h-5 w-5 text-primary" aria-hidden="true" />
+                    </div>
+                    <h3 className="font-display text-xl font-semibold">{service.title}</h3>
+                    <p className="mt-3 text-base leading-relaxed text-muted-foreground">{service.text}</p>
+                    {"details" in service && service.details ? (
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <Button variant="outline" className="mt-5 w-full cursor-pointer border-border bg-transparent hover:bg-secondary">
+                            Detalhes
+                          </Button>
+                        </DialogTrigger>
+                        <DialogContent className="w-[calc(100%-2rem)] max-w-lg rounded-lg">
+                          <DialogHeader>
+                            <DialogTitle className="font-display text-2xl">Ficha técnica e CMV</DialogTitle>
+                            <DialogDescription className="pt-2 text-base leading-relaxed">
+                              Nosso chef vai até a sua cozinha, mede as receitas e calcula quanto custa cada prato. É a base para um preço que não come a sua margem.
+                            </DialogDescription>
+                          </DialogHeader>
+                          <a href={CMV_WHATSAPP} target="_blank" rel="noopener noreferrer">
+                            <Button className="w-full cursor-pointer gap-2 text-primary-foreground">
+                              <WhatsAppIcon className="h-4 w-4" />
+                              Falar sobre esse serviço
+                            </Button>
+                          </a>
+                        </DialogContent>
+                      </Dialog>
+                    ) : null}
+                  </article>
+                ))}
+              </div>
+            </div>
+          ))}
+          <p className="text-base leading-relaxed text-muted-foreground">
+            Todo mês: relatório com o que mudou e reunião para decidir o próximo passo.
+          </p>
         </div>
       </section>
 

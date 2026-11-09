@@ -20,11 +20,11 @@ const chapters = [
 const principles = [
   {
     title: "Resultado com lucro",
-    text: "Movimentação sem margem não interessa a quem paga a conta da cozinha. O crescimento entra na conversa junto com cancelamento, reputação e preço.",
+    text: "Pedido sem margem não paga a conta da cozinha. A gestão separa o desconto da loja do desconto da plataforma e olha o que sobra depois do custo do prato.",
   },
   {
     title: "Execução, não só diagnóstico",
-    text: "A leitura da loja só vale se virar prioridade no expediente. A consultoria acompanha a operação, não entrega um relatório e some.",
+    text: "A análise da loja só vale se virar prioridade na semana. A consultoria acompanha a operação, não entrega um relatório e some.",
   },
   {
     title: "Quem responde pela loja",
@@ -37,24 +37,25 @@ const EmpresaPage = () => {
     <>
       <PageIntro
         kicker="A empresa"
-        title="Antônio Melo Soluções em Delivery"
-        lead="Uma consultoria nascida da operação real das plataformas, para quem precisa de gestão e não de mais uma opinião sobre o aplicativo."
+        title="Antônio Melo | Soluções em Delivery"
+        lead="Ex-executivo do iFood, da 99Food e da Hyperlocal. A consultoria nasceu da operação real das plataformas, para quem precisa de gestão e de margem."
       />
 
       <section className="py-16 lg:py-24">
         <div className="container grid items-center gap-12 lg:grid-cols-2">
           <div className="overflow-hidden rounded-2xl border border-border/60">
-            <img src={imagem02} alt="Antônio Melo em atendimento de consultoria" className="h-full w-full object-cover" />
+            <img src={imagem02} alt="Antônio Melo, fundador. Ex-executivo do iFood e da 99Food." className="h-full w-full object-cover" />
+            <p className="px-4 py-3 text-sm text-muted-foreground">Antônio Melo, fundador. Ex-executivo do iFood e da 99Food.</p>
           </div>
           <div className="space-y-5 text-base leading-relaxed text-muted-foreground">
             <p>
-              A casa existe para assumir a gestão da loja nas plataformas enquanto a cozinha segue na produção. O ponto de partida foi a ausência de um gestor de plataformas no mercado, mesmo com o delivery já concentrando uma parte grande do faturamento.
+              A consultoria assume a gestão da sua loja nas plataformas enquanto a cozinha segue na produção. O ponto de partida foi a ausência de um gestor de plataformas no mercado, mesmo com o delivery já concentrando uma parte grande do faturamento.
             </p>
             <p>
-              Hoje a entrega vai além de campanha e cardápio. Inclui a leitura do que a plataforma está fazendo com a loja, o tratamento de problemas e a prioridade do próximo ciclo, sempre com o responsável pela operação na conversa.
+              Hoje a entrega vai além de campanha e cardápio. Inclui a análise do que a plataforma está fazendo com a loja, o tratamento de atraso, item errado e reclamação, e a prioridade do próximo ciclo, sempre com o responsável pela operação na conversa.
             </p>
             <p className="font-medium text-foreground">
-              Escalar a operação só faz sentido quando o resultado continua lucrativo e a equipe consegue sustentar o expediente.
+              Escalar a operação só faz sentido quando o resultado continua lucrativo e a equipe consegue sustentar a semana de venda.
             </p>
           </div>
         </div>

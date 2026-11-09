@@ -24,7 +24,7 @@ const faqs = [
   },
   {
     q: "Vocês atendem fora de Belo Horizonte?",
-    a: "Sim. A sede fica no Barro Preto, em Belo Horizonte, e a gestão das plataformas acontece à distância, com lojas em outras cidades.",
+    a: "Sim. A sede fica no Barro Preto, em Belo Horizonte. A gestão das plataformas acontece à distância, com lojas em Minas Gerais, Pará, Paraná, Mato Grosso do Sul e outros estados.",
   },
   {
     q: "Posso contratar iFood e outra plataforma juntos?",

@@ -40,11 +40,11 @@ const Header = () => {
         <Link
           to="/"
           className="flex min-h-11 cursor-pointer items-center rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-          aria-label="AM Consultoria, página inicial"
+          aria-label="Antônio Melo, página inicial"
         >
           <img
             src="/WhatsApp Image 2026-03-03 at 11.50.48.jpeg"
-            alt="AM Consultoria"
+            alt="Antônio Melo | Soluções em Delivery"
             className="h-10 w-auto max-w-[9.5rem] object-contain sm:h-12 sm:max-w-none"
           />
         </Link>

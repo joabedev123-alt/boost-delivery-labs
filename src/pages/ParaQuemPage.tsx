@@ -6,7 +6,7 @@ const profiles = [
   {
     icon: Store,
     title: "Donos",
-    pain: "O aplicativo concentra venda, mas a leitura da loja fica para depois do expediente. Fraude, cancelamento e cardápio parado passam a custar sem ninguém responsável.",
+    pain: "O aplicativo concentra venda, mas a análise da loja fica para depois. Fraude, cancelamento e cardápio parado passam a custar sem ninguém responsável.",
     work: "A consultoria assume a gestão nas plataformas e devolve prioridade, para o dono proteger o resultado sem viver dentro do painel.",
   },
   {

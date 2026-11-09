@@ -9,7 +9,7 @@ const ClientesPage = () => {
       <PageIntro
         kicker="Clientes"
         title="Quem já conduz a loja com a consultoria"
-        lead="Relatos de donos e gestores, e parte das marcas atendidas. O portfólio de logos segue em atualização conforme novas lojas entram."
+        lead="Lojas atendidas em Minas Gerais, Pará, Paraná, Mato Grosso do Sul e outros estados. Os relatos trazem nome, loja e cidade."
       />
       <TestimonialsSection />
       <PartnersSection />

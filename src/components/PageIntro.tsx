@@ -8,7 +8,7 @@ type PageIntroProps = {
 
 const PageIntro = ({ kicker, title, lead }: PageIntroProps) => {
   useEffect(() => {
-    document.title = `${title} | AM Consultoria`;
+    document.title = `${title} | Antônio Melo`;
   }, [title]);
 
   return (
