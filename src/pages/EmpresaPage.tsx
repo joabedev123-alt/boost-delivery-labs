@@ -1,6 +1,5 @@
 import PageIntro from "@/components/PageIntro";
 import RelatedLinks from "@/components/RelatedLinks";
-import imagem02 from "@/assets/imagem02.jpeg";
 
 const chapters = [
   {
@@ -14,6 +13,8 @@ const chapters = [
   {
     title: "A equipe",
     text: "Mais de 1.500 lojas passaram por credenciamento ou consultoria. Com o volume, ficou claro que cancelamento, avaliação e crise também pedem método. A estrutura cresceu para entregar visão, acompanhamento diário e decisão orientada por dados, não só ajuste de cardápio ou campanha.",
+    image: "/img%20antonio.jpeg",
+    imageAlt: "Equipe de trabalho da consultoria no escritório.",
   },
 ];
 
@@ -44,7 +45,7 @@ const EmpresaPage = () => {
       <section className="py-16 lg:py-24">
         <div className="container grid items-center gap-12 lg:grid-cols-2">
           <div className="overflow-hidden rounded-2xl border border-border/60">
-            <img src={imagem02} alt="Antônio Melo, fundador. Ex-executivo do iFood e da 99Food." className="h-full w-full object-cover" />
+            <img src="/img%20antonio%2001.jpeg" alt="Antônio Melo, fundador. Ex-executivo do iFood e da 99Food." className="h-auto w-full object-cover" />
             <p className="px-4 py-3 text-sm text-muted-foreground">Antônio Melo, fundador. Ex-executivo do iFood e da 99Food.</p>
           </div>
           <div className="space-y-5 text-base leading-relaxed text-muted-foreground">
@@ -64,12 +65,20 @@ const EmpresaPage = () => {
       <section className="border-t border-border/60 py-16 lg:py-24">
         <div className="container">
           <h2 className="font-display text-3xl font-semibold">Como a consultoria chegou até aqui</h2>
-          <div className="mt-10 grid gap-6 lg:grid-cols-3">
+          <div className="mt-10 grid gap-6 lg:grid-cols-2">
             {chapters.map((chapter, index) => (
-              <article key={chapter.title} className="rounded-2xl border border-border/60 bg-card p-6 sm:p-8">
-                <p className="text-sm font-medium uppercase tracking-widest text-primary">{String(index + 1).padStart(2, "0")}</p>
-                <h3 className="mt-3 font-display text-2xl font-semibold">{chapter.title}</h3>
-                <p className="mt-4 text-base leading-relaxed text-muted-foreground">{chapter.text}</p>
+              <article
+                key={chapter.title}
+                className={`rounded-2xl border border-border/60 bg-card p-6 sm:p-8 ${"image" in chapter ? "lg:col-span-2 lg:grid lg:grid-cols-2 lg:items-center lg:gap-8" : ""}`}
+              >
+                <div>
+                  <p className="text-sm font-medium uppercase tracking-widest text-primary">{String(index + 1).padStart(2, "0")}</p>
+                  <h3 className="mt-3 font-display text-2xl font-semibold">{chapter.title}</h3>
+                  <p className="mt-4 text-base leading-relaxed text-muted-foreground">{chapter.text}</p>
+                </div>
+                {"image" in chapter ? (
+                  <img src={chapter.image} alt={chapter.imageAlt} className="mt-6 h-auto w-full rounded-xl object-cover lg:mt-0" />
+                ) : null}
               </article>
             ))}
           </div>

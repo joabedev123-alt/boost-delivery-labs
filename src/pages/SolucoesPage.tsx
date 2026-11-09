@@ -34,8 +34,8 @@ const groups = [
   {
     title: "Lucrar mais",
     items: [
-      { icon: DollarSign, title: "Precificação", text: "Preço que conversa com a margem da cozinha e com o que o cliente aceita pagar no aplicativo." },
       { icon: ChefHat, title: "Ficha técnica e CMV", text: "Nosso chef vai até a sua cozinha, mede as receitas e calcula quanto custa cada prato. É a base para um preço que não come a sua margem.", details: true },
+      { icon: DollarSign, title: "Precificação", text: "Preço que conversa com a margem da cozinha e com o que o cliente aceita pagar no aplicativo." },
       { icon: Receipt, title: "Conciliação financeira", text: "Conferimos o repasse do iFood pedido a pedido: comissão, taxa de pagamento, antecipação e quem pagou cada desconto, a loja ou a plataforma. Você sabe quanto sobrou de verdade." },
     ],
   },
@@ -77,39 +77,60 @@ const SolucoesPage = () => {
           {groups.map((group) => (
             <div key={group.title}>
               <h2 className="font-display text-3xl font-semibold">{group.title}</h2>
-              <div className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-                {group.items.map((service) => (
-                  <article key={service.title} className="flex flex-col rounded-2xl border border-border/60 bg-card p-6">
-                    <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10">
-                      <service.icon className="h-5 w-5 text-primary" aria-hidden="true" />
-                    </div>
-                    <h3 className="font-display text-xl font-semibold">{service.title}</h3>
-                    <p className="mt-3 text-base leading-relaxed text-muted-foreground">{service.text}</p>
-                    {"details" in service && service.details ? (
-                      <Dialog>
-                        <DialogTrigger asChild>
-                          <Button variant="outline" className="mt-5 w-full cursor-pointer border-border bg-transparent hover:bg-secondary">
-                            Detalhes
-                          </Button>
-                        </DialogTrigger>
-                        <DialogContent className="w-[calc(100%-2rem)] max-w-lg rounded-lg">
-                          <DialogHeader>
-                            <DialogTitle className="font-display text-2xl">Ficha técnica e CMV</DialogTitle>
-                            <DialogDescription className="pt-2 text-base leading-relaxed">
-                              Nosso chef vai até a sua cozinha, mede as receitas e calcula quanto custa cada prato. É a base para um preço que não come a sua margem.
-                            </DialogDescription>
-                          </DialogHeader>
-                          <a href={CMV_WHATSAPP} target="_blank" rel="noopener noreferrer">
-                            <Button className="w-full cursor-pointer gap-2 text-primary-foreground">
-                              <WhatsAppIcon className="h-4 w-4" />
-                              Falar sobre esse serviço
-                            </Button>
-                          </a>
-                        </DialogContent>
-                      </Dialog>
-                    ) : null}
-                  </article>
-                ))}
+              <div className={`mt-6 grid gap-4 sm:grid-cols-2 ${group.items.some((service) => "details" in service && service.details) ? "" : "xl:grid-cols-3"}`}>
+                {group.items.map((service) => {
+                  const withVideo = "details" in service && service.details;
+                  return (
+                    <article
+                      key={service.title}
+                      className={`flex flex-col rounded-2xl border border-border/60 bg-card p-6 ${withVideo ? "sm:col-span-2 lg:grid lg:grid-cols-2 lg:items-center lg:gap-8" : ""}`}
+                    >
+                      <div className="flex flex-col">
+                        <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10">
+                          <service.icon className="h-5 w-5 text-primary" aria-hidden="true" />
+                        </div>
+                        <h3 className="font-display text-xl font-semibold">{service.title}</h3>
+                        <p className="mt-3 text-base leading-relaxed text-muted-foreground">{service.text}</p>
+                        {withVideo ? (
+                          <Dialog>
+                            <DialogTrigger asChild>
+                              <Button variant="outline" className="mt-5 w-full cursor-pointer border-border bg-transparent hover:bg-secondary lg:w-auto">
+                                Detalhes
+                              </Button>
+                            </DialogTrigger>
+                            <DialogContent className="w-[calc(100%-2rem)] max-w-lg rounded-lg">
+                              <DialogHeader>
+                                <DialogTitle className="font-display text-2xl">Ficha técnica e CMV</DialogTitle>
+                                <DialogDescription className="pt-2 text-base leading-relaxed">
+                                  Nosso chef vai até a sua cozinha, mede as receitas e calcula quanto custa cada prato. É a base para um preço que não come a sua margem.
+                                </DialogDescription>
+                              </DialogHeader>
+                              <a href={CMV_WHATSAPP} target="_blank" rel="noopener noreferrer">
+                                <Button className="w-full cursor-pointer gap-2 text-primary-foreground">
+                                  <WhatsAppIcon className="h-4 w-4" />
+                                  Falar sobre esse serviço
+                                </Button>
+                              </a>
+                            </DialogContent>
+                          </Dialog>
+                        ) : null}
+                      </div>
+                      {withVideo ? (
+                        <div className="mt-5 overflow-hidden rounded-xl bg-black lg:mt-0">
+                          <video
+                            controls
+                            playsInline
+                            preload="metadata"
+                            className="aspect-video w-full object-cover"
+                            src="/video%20trabalho.mp4"
+                          >
+                            Seu navegador não reproduz este vídeo.
+                          </video>
+                        </div>
+                      ) : null}
+                    </article>
+                  );
+                })}
               </div>
             </div>
           ))}
