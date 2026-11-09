@@ -4,7 +4,6 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { FORMACAO_WHATSAPP, whatsappLink } from "@/lib/contact";
-import imagem02 from "@/assets/imagem02.jpeg";
 
 const WHATSAPP_URL = whatsappLink(
   "Olá! Quero uma análise da minha loja. Segue o link do iFood:",
@@ -88,16 +87,11 @@ const Index = () => {
               ))}
             </ul>
           </div>
-          <figure className="overflow-hidden rounded-2xl border border-border/60">
-            <img
-              src={imagem02}
-              alt="Antônio Melo, fundador. Ex-executivo do iFood e da 99Food."
-              className="aspect-[4/5] w-full object-cover sm:aspect-[4/3] lg:aspect-[4/5]"
-            />
-            <figcaption className="px-4 py-3 text-sm text-muted-foreground">
-              Antônio Melo, fundador. Ex-executivo do iFood e da 99Food.
-            </figcaption>
-          </figure>
+          <img
+            src="/img%20antonio%2001.jpeg"
+            alt="Antônio Melo, fundador. Ex-executivo do iFood e da 99Food."
+            className="h-auto w-full rounded-2xl object-cover lg:max-h-[28rem]"
+          />
         </div>
       </section>
 
