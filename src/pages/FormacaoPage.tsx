@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import PageIntro from "@/components/PageIntro";
 import RelatedLinks from "@/components/RelatedLinks";
 import { FORMACAO_WHATSAPP } from "@/lib/contact";
-import imagem02 from "@/assets/imagem02.jpeg";
 
 const audiences = [
   {
@@ -196,11 +195,11 @@ const FormacaoPage = () => {
       </section>
 
       <section className="border-t border-border/60 py-16 lg:py-24">
-        <div className="container grid gap-8 lg:grid-cols-[240px_1fr] lg:items-center">
+        <div className="container grid gap-8 lg:grid-cols-[minmax(0,28rem)_1fr] lg:items-center">
           <img
-            src={imagem02}
+            src="/img%20antonio%2001.jpeg"
             alt="Antônio Melo, fundador. Ex-executivo do iFood e da 99Food."
-            className="aspect-[4/5] w-full rounded-2xl object-cover"
+            className="h-auto w-full rounded-2xl object-cover"
           />
           <div>
             <h2 className="font-display text-3xl font-semibold">Quem ensina</h2>
